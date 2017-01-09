@@ -1,0 +1,23 @@
+{% extends 'admin/change_form.html' %}
+
+{% load staticfiles %}
+
+{% block extrahead %}
+    {{ block.super }}
+
+    <script src="{% static 'js/jquery/jquery-2.0.0.js' %}"></script>
+
+    <script>
+        $(function () {
+            $('#id_membresia_minima').attr('disabled', 'disabled');
+            $('#id_gana_robot').click(function (e) {
+                if ($(this).is(':checked')) {
+                    $('#id_membresia_minima').attr('disabled', 'disabled');
+                } else {
+                    $('#id_membresia_minima').removeAttr('disabled');
+                }
+            });
+        });
+    </script>
+
+{% endblock %}

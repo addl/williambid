@@ -1,0 +1,59 @@
+{% extends 'index_back_office.html' %}
+{% load staticfiles i18n %}
+
+{% block main_content %}
+
+    {% if autopuja %}
+        <script>
+            var article_selected =  "{{ autopuja.articulo.id }}";
+            $(function () {
+                $("select#article_id").val(article_selected.toString());
+            })
+        </script>
+    {% endif %}
+
+    <div class="widget">
+        <div class="title">
+            <img src="{% static "back_office/images/icons/dark/list.png" %}" alt="" class="titleIcon">
+            {% if autopuja %}
+                <h6>{% trans "Edit Autopuja" %}</h6>
+            {% else %}
+                <h6>{% trans "Add Autopuja" %}</h6>
+            {% endif %}
+        </div>
+        <form class="form" action="/usuarios/back-office/administracion/autopujas/add/" method="POST">
+            {% csrf_token %}
+            {% if autopuja %}
+                <input type="hidden" name="autopuja_id" value="{{ autopuja.id }}">
+            {% endif %}
+            <div class="formRow">
+                <label>{% trans "Cantidad de pujas" %}</label>
+                <div class="formRight">
+                    <input type="text" name="cantidad_pujas" value="{{ autopuja.cantidad_pujas }}">
+                </div>
+            </div>
+            <div class="formRow">
+                <label for="tags">{% trans "Art&iacute;culo" %}</label>
+                <div class="formRight">
+                    <select name="article_id" id="article_id">
+                        {% for article in articles %}
+                            <option value="{{ article.id }}">{{ article.content_ptr.nombre }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="formRow">
+                <label>&nbsp;</label>
+                <div class="formRight">
+                    <input type="submit" value="{% trans "Adicionar Autopuja" %}">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    {% if autopuja %}
+
+    {% endif %}
+
+
+{% endblock %}

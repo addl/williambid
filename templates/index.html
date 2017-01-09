@@ -1,0 +1,23 @@
+{% extends "common/main_content.html" %}
+{% load i18n %}
+
+{% block bloque_principal %}
+
+    <div class="box-product">
+
+        {% block main_products %}
+            {% include "pagina_inicio/box_product.html" %}
+        {% endblock %}
+
+    </div>
+    <!-- << box product >> -->
+
+{% endblock %}
+
+{% block banner_de_promocion %}
+    {% include "pagina_inicio/banner_promocionales.html" %}
+{% endblock %}
+
+{% block tabs %}
+    {% include "pagina_inicio/tabs.html" %}
+{% endblock %}

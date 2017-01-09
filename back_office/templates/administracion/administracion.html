@@ -1,0 +1,20 @@
+{% extends 'base_back_office.html' %}
+
+{% block bloque_principal %}
+    <script type="text/javascript">
+        $(function () {
+            $('div.tabs input[radio]').removeAttr('checked')
+            $('#administracion').attr('checked', 'checked');
+        });
+    </script>
+
+    {% block administracion_content %}
+        <h5>Pagina adminstracion</h5>
+
+        <p>Membresia: <h3>{{ user.perfilusuario.membresia }}</h3></p>
+
+        <p>Tipo de usuario: <h3>{{ user.perfilusuario.tipo_usuario }}</h3></p>
+
+    {% endblock %}
+
+{% endblock %}

@@ -1,0 +1,91 @@
+{% load i18n staticfiles%}
+
+<style>
+    #account {
+        list-style: none;
+        display: inline;
+        position: relative;
+        top: 25px;
+    }
+
+    #account li {
+        display: inline;
+        padding: 2px;
+    }
+</style>
+
+<div id="top">
+    {% if user.is_authenticated %}
+        <ul id="account">
+            <li><span>{% trans "Bienvenido" %} {{ user.username }}</span></li>
+            <li><a href="/usuarios/back-office/" class="button">{% trans "Mi Cuenta" %}</a></li>
+            <li><a href="/salir/" class="button">{% trans "Salir" %}</a></li>
+        </ul>
+    {% else %}
+        <form action="/autenticar/" method="post" enctype="multipart/form-data" id="currency_form">
+            {% csrf_token %}
+            {% trans "Usuario" %} <input name="user" value="" type="text">
+            {% trans "Contraseña" %} <input name="password" value="" type="password">
+
+            <a class="button">
+                <input class="button" type="submit" value='{% trans "Entrar" %}'/>
+            </a>
+            <a href="/usuarios/registro/" class="button">
+                <span>{% trans "Registrarse" %}</span>
+            </a>
+            <!-- << currency switcher >> -->
+        </form>
+    {% endif %}
+    <!-- << currency form >> -->
+    {% if not user.is_authenticated %}
+        <div align="left">
+            <a href="#">{% trans "¿Olvido contraseña?" %}</a>
+            {% if errors %}
+                <span>{% trans "Credenciales incorrectas. Intente de nuevo." %}</span>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    <div id="language">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% for lang in LANGUAGES %}
+            {% ifequal lang.0 'en-us' %}
+                {% if lang.0 == LANGUAGE_CODE %}
+                    <span class="current_language">
+                {% else %}
+                    <span>
+                {% endif %}
+            <a href="/lang/en">
+                <img src="{% static "img/icons/uk.png" %}" width="24"/>
+            </a>
+            </span>
+            {% endifequal %}
+            {% if lang.0 == 'es-es' %}
+                {% if lang.0 == LANGUAGE_CODE %}
+                    <span class="current_language">
+                {% else %}
+                    <span>
+                {% endif %}
+            <a href="/lang/es">
+                <img src="{% static "img/icons/es.png" %}" width="24"/>
+            </a>
+            </span>
+            {% endif %}
+            {% if lang.0 == 'pt-pt' %}
+                {% if lang.0 == LANGUAGE_CODE %}
+                    <span class="current_language">
+                {% else %}
+                    <span>
+                {% endif %}
+            <a href="/lang/pt">
+                <img src="{% static "img/icons/pt.png" %}" width="24"/>
+            </a>
+            </span>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+
+</div>
+<!-- << top >> -->

@@ -1,0 +1,116 @@
+{% extends 'index_back_office.html' %}
+
+{% load staticfiles i18n %}
+
+{% block main_content %}
+
+    {% if form.errors %}
+        <div class="nNote nFailure hideit">
+            <p>{% trans "!!!Algunos campos requieren su atenci&oacute;n!!!" %}</p>
+        </div>
+    {% endif %}
+
+    <div class="widget">
+        <div class="title">
+            <img src="{% static "back_office/images/icons/dark/user.png" %}" class="titleIcon">
+            <h6>{% trans "Perfil de usuario" %}</h6>
+        </div>
+
+
+        <form class="form">
+            <div class="fluid">
+                <div class="formRow">
+                    <span class="span4">
+                        <label>{% trans "Avatar" %}</label>
+                        <div class="info_user formRight">
+                            <span>
+                                <img src="{% static "back_office/images/user.png" %}">
+                            </span>
+                        </div>
+                    </span>
+                    <span class="span4">
+                        <label>{% trans "Usuario" %}</label>
+                        <div class="info_user formRight">
+                            <span>{{ user.username }}</span>
+                        </div>
+                    </span>
+                    <span class="span4">
+                        <label>{% trans "Correo" %}</label>
+                        <div class="info_user formRight">
+                            <span>{{ user.email }}"</span>
+                        </div>
+                    </span>
+                </div>
+                <!-- Datos del perfil -->
+                <div class="formRow">
+                    <span class="span4">
+                        <label>{% trans "Direccion" %}</label>
+                        <div class="info_user formRight">
+                            <span>{{ user.perfilusuario.direccion }}</span>
+                        </div>
+                    </span>
+                    <span class="span4">
+                        <label>{% trans "Ciudad" %}</label>
+                        <div class="info_user formRight">
+                            <span>{{ user.perfilusuario.ciudad }}</span>
+                        </div>
+                    </span>
+                    <span class="span4">
+                        <label>{% trans "Provincia" %}</label>
+                        <div class="info_user formRight">
+                            <span>{{ user.perfilusuario.provincia }}</span>
+                        </div>
+                    </span>
+                </div>
+                <div class="formRow">
+                    <span class="span4">
+                        <label>{% trans "País" %}</label>
+                        <div class="info_user formRight">
+                            <span>{{ user.perfilusuario.pais }}</span>
+                        </div>
+                    </span>
+                    <span class="span4">
+                        <label>{% trans "Teléfono" %}</label>
+                        <div class="info_user formRight">
+                            <span>{{ user.perfilusuario.telefono }}</span>
+                        </div>
+                    </span>
+                    <span class="span4">
+                       <label>{% trans "Seudonimo" %}</label>
+                       <div class="info_user formRight">
+                           <span>{{ user.perfilusuario.seudonimo }}</span>
+                       </div>
+                   </span>
+                </div>
+                <div class="formRow">
+                   <span class="span4">
+                       <label>{% trans "Whatsapp ID" %}</label>
+                       <div class="info_user formRight">
+                           <span>{{ user.perfilusuario.whatsapp_id }}</span>
+                       </div>
+                   </span>
+                   <span class="span4">
+                       <label>{% trans "Skype ID" %}</label>
+                       <div class="info_user formRight">
+                           <span>{{ user.perfilusuario.skype_id }}</span>
+                       </div>
+                   </span>
+                   <span class="span4">
+                       &nbsp;
+                   </span>
+                </div>
+                <div class="formRow">
+                    <span class="span8">
+                        &nbsp;
+                    </span>
+                    <span class="span4">
+                        <a href="/usuarios/back-office/administracion/profile/edit/" class="button redB pull-right">
+                            <span>{% trans "Editar perfil" %}</span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

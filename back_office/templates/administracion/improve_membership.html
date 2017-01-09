@@ -1,0 +1,27 @@
+{% extends 'index_back_office.html' %}
+{% load staticfiles i18n %}
+
+{% block main_content %}
+
+    <div class="widget">
+        <div class="title">
+            <img src="{% static "back_office/images/icons/dark/paypal2.png" %}" alt="" class="titleIcon">
+            <h6>{% trans "Carrito de compra" %}</h6>
+            <div class="num">
+                <a href="#" class="blueNum">{{ num}}</a>
+            </div>
+        </div>
+        <table cellpadding="0" cellspacing="0" width="100%" class="sTable taskWidget">
+            <thead>
+            <td>{% trans "No." %}</td>
+            <td>{% trans "Art&iacute;culo ganado" %}</td>
+            <td>{% trans "Precio" %}</td>
+            <td>{% trans "Opciones" %}</td>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

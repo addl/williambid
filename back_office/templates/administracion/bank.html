@@ -1,0 +1,77 @@
+{% extends 'index_back_office.html' %}
+
+{% load staticfiles i18n %}
+
+{% block main_content %}
+    <script src="{% static 'js/back-office/banco/banco.js' %}"></script>
+    <script src="{% static 'js/back-office/banco/planes.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            /**obtener el estado de cuentas por planes*/
+            obtener_estado_de_cuentas();
+            setInterval(obtener_estado_de_cuentas, 5 * 1000) //cada 10 segundos
+            /*Obtener el estado del usuario por planes*/
+            obtener_estado_de_usuario_x_planes();
+        });
+    </script>
+
+    <div id="contenedor_cuentas">
+
+        <div class="widget">
+            <div class="title">
+                <img src="{% static "back_office/images/icons/dark/timer.png" %}" alt="" class="titleIcon">
+                <h6>{% trans "Estado por plan de compensacion" %}</h6>
+
+                <div class="num"><a href="#" class="blueNum">+245</a></div>
+            </div>
+            <table cellpadding="0" cellspacing="0" width="100%" class="sTable taskWidget" id="estado_planes_table">
+                <thead>
+                <tr>
+                    <td>{% trans "No. Plan" %}</td>
+                    <td>{% trans "Nombre" %}</td>
+                    <!-- Requisitos -->
+                    <td>{% trans "Minimo Tipo de usuario" %}</td>
+                    <td>{% trans "Minima Membresia" %}</td>
+                    <td>{% trans "Cantidad de usuarios en red" %}</td>
+                    <td>{% trans "Cantidad de dinero" %}</td>
+                    <td>{% trans "Cantidad de puntos" %}</td>
+                </tr>
+                </thead>
+                <tbody>
+
+                <!--
+                <tr>
+                    <td class="taskD">
+                        <a href="#" title="">Start beta testing</a></td>
+                    <td><span class="red f11">done</span></td>
+                    <td class="actBtns"><a href="#" class="tipS" original-title="Update"><img src="/static/back_office/images/icons/edit.png" alt=""></a><a href="#" class="tipS" original-title="Remove"><img src="/static/back_office/images/icons/remove.png" alt=""></a></td>
+                </tr>
+                -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="widget">
+
+            <div class="title"><img src="{% static "back_office/images/icons/dark/stats.png" %}" alt=""
+                                    class="titleIcon">
+                <h6>{% trans "Estad&iacute;sticas por plan" %}</h6>
+            </div>
+
+            <table cellpadding="0" cellspacing="0" width="100%" class="sTable" id="bank_table">
+                <thead>
+                <tr>
+                    <td width="80">{% trans "Plan" %}</td>
+                    <td width="80">{% trans "Cantidad" %}</td>
+                    <td>{% trans "Descripci&oacute;n" %}</td>
+                    <td width="80">{% trans "&Uacute;ltimo Dep&oacute;sito" %}</td>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+{% endblock %}

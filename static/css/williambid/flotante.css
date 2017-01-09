@@ -1,0 +1,83 @@
+div.menu_normal{
+	width: 45px;
+	height: 300px;
+	position: absolute;
+	top: 40px;
+	left: 50%;
+	margin-left: 485px;
+	z-index: 999;
+}
+
+div.menu_floatderecha{
+	width:20px;
+	height:180px;
+	overflow: hidden;
+	position:absolute;
+	top:10px;
+	right:0;
+	margin-right:0;
+	z-index:999;
+}
+
+div#menu_flotante ul{
+	width:45px;
+	height:180px;
+	/*background-image:url("file:///E|/TRABAJOS/101 TRABAJOS GOMERO/DARBID/shopcart-html/images/bg_menu_flotante.png");*/
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+div#menu_flotante ul li{
+	width:40px;
+	height:40px;
+	margin:0;
+	display: block;
+	padding-bottom: 3px;
+}
+
+div#menu_flotante ul li a{
+	width: 40px;
+	height: 40px;
+	display: block;
+}
+
+div#menu_flotante ul li.icohome{
+
+	background-image:url(../img/icohome.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+}
+
+div#menu_flotante ul li.icofacebook{
+
+	background-image:url(../img/icofacebook.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+}
+div#menu_flotante ul li.icotwitter{
+
+	background-image:url(../img/icotwitter.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+}
+
+div#menu_flotante ul li.icou2{
+
+	background-image:url(../img/icou2.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+}
+
+div#menu_flotante ul li.iconoticias{
+
+	background-image:url(../img/iconoticias.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+}
+
+div#menu_flotante ul li.icomail{
+
+	background-image:url(../img/icomail.png);
+	background-repeat:no-repeat;
+}

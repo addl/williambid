@@ -1,0 +1,193 @@
+{% load staticfiles i18n %}
+
+{% if subastas %}
+    <div id="dialog-message" title="{% trans "Mensaje de error" %}">
+        <p>
+            <img src="{% static "back_office/images/icons/delete.png" %}" alt="" class="icon"/>
+            {% trans "No tienes suficientes bids" %}
+        </p>
+    </div>
+
+    {% for subasta in subastas %}
+        <!-- << show one product >> -->
+        <div id="subasta{{ subasta.id }}" style="opacity: 1;">
+            <div class="product_outside_border">
+                <div class="product_outside">
+                    <div class="product_inside">
+                        <div class="name">
+                            <a class="fancybox fancybox.iframe" href="#">{{ subasta.contenido.nombre }}</a>
+                        </div>
+                        <div class="image">
+                            <a class="fancybox fancybox.iframe" href="#">
+                                {% if subasta.contenido.articulo %}
+                                    <img src="/{{ subasta.contenido.articulo.imagen }}"
+                                         alt="iMac" width="160" height="110"/>
+                                    {# sino tiene articulo es un paquete de bids, y buscamos la imagen correspondiente #}
+                                {% else %}
+                                    <img src="{% static "back_office/images/icons/dMoney.png" %}"
+                                         alt="iMac" width="160" height="110"/>
+                                {% endif %}
+                            </a>
+                        </div>
+                        {% if subasta.estado == 3 %}
+                            <div class="sold_container">
+                                <div class="sold_out"></div>
+                            </div>
+                        {% endif %}
+
+                        <!-- <div class="name">550.00 €</div>  -->
+                        <div class="clock_container">
+                            <span id="clock{{ subasta.id }}" style="margin:2em;">{% trans "Terminada" %}</span>
+                            {% if subasta.estado == 2 %}
+                                <script>
+                                    $(document).ready(function () {
+                                        //adicionamos la subasta a la lista javascript
+                                        //notar que esta lista(arreglo) es paralelo al de relojs
+                                        //ambos estan definidos en main.js, bajo carpeta custom
+                                        subastas_list.push({{ subasta.id }});
+                                        //trabajamos en el reloj de la subasta
+                                        fecha{{ subasta.id }} = "{{ subasta.fecha_expiracion.isoformat }}";
+                                        future_day = new Date(fecha{{ subasta.id }});
+                                        //futureDateUTC = new Date(future_day.getUTCFullYear(), future_day.getUTCMonth(), future_day.getUTCDate(), future_day.getUTCHours(), future_day.getUTCMinutes(), future_day.getUTCSeconds());
+                                        futureDateUTC = new Date(future_day.getFullYear(), future_day.getMonth(), future_day.getDate(), future_day.getHours(), future_day.getMinutes(), future_day.getSeconds());
+                                        //diffDate = futureDateUTC.getTime() / 1000 - dateNow.getTime() / 1000;
+                                        clock = $("#clock" + {{ subasta.id }});
+                                        $(clock).countdown(futureDateUTC, function (event) {
+                                            $(this).text(event.strftime('%H:%M:%S'));
+                                            if (event.offset.seconds <= 5 & event.offset.minutes < 1 & event.offset.hours < 1) {
+                                                $("#clock" +{{ subasta.id }}).css('backgroundColor', "#FF0000");
+                                                setTimeout(function () {
+                                                    $("#clock" +{{ subasta.id }}).css('backgroundColor', "#FFFFFF");
+                                                }, 300);
+                                            }
+                                            //console.log($(this).attr('id'));
+                                        }).on('finish.countdown', function () {
+                                            actualizar_subasta_vendida("{{ subasta.id }}");
+                                        });
+                                        clock_list['clock{{ subasta.id }}'] = clock;
+                                    });
+                                </script>
+                            {% endif %}
+
+                        </div>
+                        <div>
+                            <span class="price-new"> {{ subasta.precio_actual }} </span> €
+                        </div>
+
+                        {% if subasta.estado == 2 %}
+                            {% ifequal subasta.tipo_subasta.id 1 %}
+                                <div class="product_opportunity"></div>
+                            {% endifequal %}
+                            {% ifequal subasta.tipo_subasta.id 2 %}
+                                <div class="product_hot_bid"></div>
+                            {% endifequal %}
+                            {% ifequal subasta.tipo_subasta.id 3 %}
+                                <div class="product_special"></div>
+                            {% endifequal %}
+                            {% ifequal subasta.tipo_subasta.id 4 %}
+                                <div class="product_premium"></div>
+                            {% endifequal %}
+                        {% endif %}
+
+                        <div class="cart">
+                            <span class="" id="ganador{{ subasta.id }}">
+                                {% if subasta.ganador %}
+                                    {{ subasta.ganador.username }}
+                                {% else %}
+                                    &nbsp;
+                                {% endif %}
+                            </span>
+                        </div>
+
+                        <div class="cart">
+                            <a class="fancybox button" href="#">
+                                {% if subasta.estado == 3 %}
+                                    <span class="" id="">{% trans "Vendida" %}</span>
+                                {% else %}
+                                    <span class="boton_pujar" id="{{ subasta.id }}">{% trans "Pujar" %}</span>
+                                {% endif %}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- << product outside border >> -->
+        </div>
+    {% endfor %}
+
+{% else %}
+    <h3>
+        {% blocktrans %}
+            Lo sentimos!!!!, No existen pujas disponibles en este instante
+        {% endblocktrans %}
+    </h3>
+{% endif %}
+
+<script>
+    $(document).ready(function () {
+        {% if user.is_authenticated %}
+            $('.boton_pujar').click(function (e) {
+                //prevenir comportamiento del link, para que la pagina no se mueva o valla a ningun ancla o URL
+                e.preventDefault();
+                id_subasta = $(this).attr('id');
+                alert(id_subasta);
+                pujar(id_subasta);
+            });
+        {% endif %}
+        $("#dialog-message").dialog({
+            autoOpen: false,
+            modal: true,
+            buttons: {
+                /*Ok: function () {
+                 $(this).dialog("close");
+                 }*/
+            }
+        });
+        /*enlazar el evento de clic para poner una subasta en modo dialog*/
+        $("div.product_outside > div.product_inside > div.name > a").click(function (event) {
+            event.preventDefault();
+            /*Create div container for dialog*/
+            modal_sub = $("<div/>").attr("id", "subasta_modal").appendTo("body");
+            /*alert("asd");*/
+            subasta_container = $('div[id^=subasta]').has(this);
+            $(subasta_container).appendTo(modal_sub)
+            $(modal_sub).dialog({
+                modal: true,
+                title: 'Dialog Title',
+                draggable: false,
+                beforeClose: function (event, ui) {
+                    var auctionsContainer = $(".box-product");
+                    var id_subasta = $(subasta_container).find("a span.boton_pujar").attr("id");
+                    var pos = 0;
+                    /*Buscar las posicion de la subasta en el arreglo, asi obtenemos el id de la subasta anterior*/
+                    $.each(subastas_list, function (index, elem) {
+                        if (parseInt(id_subasta) == parseInt(elem)) {
+                            pos = index;
+                            console.log("Found " + pos);
+                        }
+                    });
+                    if (pos == subastas_list.length - 1) {
+                        $(subasta_container).appendTo(auctionsContainer);
+                    } else {
+                        id_subasta_ulterior = subastas_list[pos + 1];
+                        subasta_ulterior = $("#subasta" + id_subasta_ulterior);
+                        $(subasta_container).insertBefore(subasta_ulterior);
+                    }
+
+                }
+            });
+        });
+        /*Tooltips para los compras de los paquetes de bids*/
+         $(".tooltip_buy_pkt").tipsy({gravity: 'w', fade: true});
+    });
+</script>
+
+<script src="{% static "js/custom/main.js" %}"></script>
+
+<!-- modal content
+
+<div id="modal">
+    <div class="plainmodal-close"></div>
+    Your Content Goes Here
+</div>
+-->

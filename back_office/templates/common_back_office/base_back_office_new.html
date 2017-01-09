@@ -1,0 +1,193 @@
+{% load staticfiles i18n %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    {% include "common_back_office/back_office_meta_header.html" %}
+
+</head>
+
+<body>
+
+{% block admin_body %}
+
+    <!-- Left Side Content-->
+    {% include "common_back_office/left_side_content.html" %}
+
+    <!-- Right side -->
+    <div id="rightSide">
+
+        <!-- Top fixed navigation -->
+        <div class="topNav">
+            <div class="wrapper">
+                <div class="welcome">
+                    <a href="#" title="">
+                        <img src="{% static "back_office/images/userPic.png" %}" alt=""/>
+                    </a><span>{% trans "Hola:" %} {{ user.username }}</span>
+                </div>
+                <div class="userNav">
+                    <ul>
+                        <li>
+                            <a href="/usuarios/back-office/administracion/profile/show/" title="">
+                                <img src="{% static "back_office/images/icons/topnav/profile.png" %}"
+                                     alt=""/>
+                                <span>{% trans "Mi cuenta" %}</span>
+                            </a>
+                        </li>
+                        <li class="dd">
+                            <a title="" href="/usuarios/back-office/administracion/shopping-cart/">
+                                <img src="{% static "back_office/images/icons/light/cart.png" %}"
+                                     alt=""/>
+                                <span>{% trans "Carrito" %}</span>
+                                {#                                {% if shopping_cart_count > 0 %}#}
+                                <span class="numberTop">{{ user_info.shopping_cart_count }}</span>
+                                {#                                {% endif %}#}
+                            </a>
+                        </li>
+                        <li class="dd">
+                            <a title="" href="/usuarios/back-office/administracion/autopujas/">
+                                <img src="{% static "back_office/images/icons/topnav/subOutbox.png" %}"
+                                     alt=""/>
+                                <span>{% trans "Auto-Pujas" %}</span>
+                            </a>
+                        </li>
+                        <li class="dd">
+                            <a title="" href="/usuarios/back-office/administracion/mensajes/">
+                                <img src="{% static "back_office/images/icons/topnav/messages.png" %}"
+                                     alt=""/>
+                                <span>{% trans "Mensajes" %}</span>
+                                {% if new_msgs > 0 %}
+                                    <span class="numberTop">{{ user_info.new_msgs }}</span>
+                                {% endif %}
+                            </a>
+                        </li>
+                        <li>
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+{#                            {% for lang in LANGUAGES %}#}
+{#                                {% if not lang.0 == LANGUAGE_CODE %}#}
+{#                                    {% if lang.0 == 'es-es' %}#}
+                                        <a href="/lang/es">
+                                            <img src="{% static "img/icons/es.png" %}" width="24"/>
+                                        </a>
+{#                                    {% endif %}#}
+{#                                    {% if lang.0 == 'en-en' %}#}
+                                        <a href="/lang/en">
+                                            <img src="{% static "img/icons/uk.png" %}" width="24"/>
+                                        </a>
+{#                                    {% endif %}#}
+{#                                    {% if lang.0 == 'pt-pt' %}#}
+                                        <a href="/lang/pt">
+                                            <img src="{% static "img/icons/pt.png" %}" width="24"/>
+                                        </a>
+{#                                    {% endif %}#}
+{#                                {% endif %}#}
+{#                            {% endfor %}#}
+                        </li>
+                        <li>
+                            <a href="/salir/" title="">
+                                <img src="{% static "back_office/images/icons/topnav/logout.png" %}" alt=""/>
+                                <span>{% trans "Salir" %}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="titleArea"></div>
+
+        <!-- Page statistics and control buttons area -->
+        <div class="statsRow">
+            <div class="wrapper">
+                <div class="controlB">
+                    {% block main_actions %}
+                        <ul>
+                            <li>
+                                <a href="/usuarios/back-office/" title="">
+                                    <img src="{% static "back_office/images/icons/control/32/home.png" %}" alt=""/>
+                                    <span>{% trans "Mi Dashboard" %}</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/usuarios/back-office/administracion/subastas" title="">
+                                    <img src="{% static "back_office/images/icons/control/32/cost.png" %}" alt=""/>
+                                    <span>{% trans "Subastas activas" %}</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/usuarios/back-office/administracion/paquetes-bid" title="">
+                                    <img src="{% static "back_office/images/icons/control/32/administrative-docs.png" %}"
+                                         alt=""/>
+                                    <span>{% trans "Paquetes de bids" %}</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/usuarios/back-office/administracion/red" title="">
+                                    <img src="{% static "back_office/images/icons/control/32/sitemap.png" %}" alt=""/>
+                                    <span>{% trans "Ver tu red" %}</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/usuarios/back-office/administracion/ads" title="">
+                                    <img src="{% static "back_office/images/icons/control/32/statistics.png" %}"
+                                         alt=""/>
+                                    <span>{% trans "Publicidad" %}</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/usuarios/back-office/administracion/banco" title="">
+                                    <img src="{% static "back_office/images/icons/control/32/bank.png" %}" alt=""/>
+                                    <span>{% trans "Cuenta bancaria" %}</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/usuarios/back-office/administracion/retos" title="">
+                                    <img src="{% static "back_office/images/icons/control/32/order-149.png" %}" alt=""/>
+                                    <span>{% trans "Ver retos" %}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- Main content wrapper -->
+        <div class="wrapper">
+
+            {% block information %}
+
+            {% endblock %}
+
+            {% block main_content %}
+
+
+            {% endblock %}
+
+
+        </div>
+
+        <!-- Footer line -->
+        <div style="clear: both; float: none; margin-top: 2em"></div>
+        <div id="footer">
+            <!-- <div class="wrapper">
+                As usually all rights reserved. And as usually brought to you by
+                <a href="http://themeforest.net/user/Kopyov?ref=kopyov" title="">Eugene Kopyov</a>
+            </div>
+            -->
+            <div class="wrapper">
+                {% trans "Copyright 2016. Todos los derechos reservados." %}
+                <a href="http://williambid.com" title="">WILLIAMBID.COM</a>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+</body>
+</html>

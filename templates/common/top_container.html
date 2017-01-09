@@ -1,0 +1,89 @@
+{% load staticfiles i18n %}
+
+<div id="top_container">
+    <div class="container">
+
+
+        <div id="header">
+            <div id="logo">
+                <a href="/"><img src='{% static 'img/shopcartlogo.png' %}'
+                                 title="WilliamBID"
+                                 alt="WilliamBID"/></a>
+            </div>
+            {% block header_right %}
+
+                <div id="header_right">
+
+                    {% include "common/header_login.html" %}
+
+                </div><!-- << header right >> -->
+
+            {% endblock %}
+            <div id="header_bottom">
+                <div id="menu">
+                    <ul>
+                        <li>
+                            <a href="/">{% trans "Inicio" %}</a>
+                        </li>
+                        <li>
+                            <a href="/about">{% trans "Acerca de..." %}</a>
+                        </li>
+                        <li>
+                            <a href="#">{% trans "Club de socios" %}</a>
+                        </li>
+                        <li>
+                            <a href="/business-opportunity">{% trans "Oportunidad de negocio" %}</a>
+                        </li>
+                        <li>
+                            <a href="/paquetes-bid/comprar">{% trans "Comprar pujas" %}</a>
+                        </li>
+{#                        <li>#}
+{#                            <a href="/terms">{% trans "T&eacute;rminos y condiciones" %}</a>#}
+{#                        </li>#}
+                    </ul>
+                </div>
+                <!-- << menu >> -->
+
+                <!-- << cart >>
+                <div id="cart">
+                    <div class="heading">
+                        <h4>Shopping Cart</h4>
+                        <a><span id="cart_total">Registrarse</span></a>
+                    </div>
+
+                </div>   -->
+                <!-- << cart >> -->
+
+            </div>
+            <!-- << header bottom >> -->
+        </div>
+        <!--  end header -->
+
+        <div id="header_bottom_shadow"></div>
+
+        <div id="notification"></div>
+
+    </div>
+    <!-- << container >> -->
+
+    <div class="container">
+        <div id="amazingslider-1" style="display:block;position:relative;margin:16px auto 6px;">
+            <ul class="amazingslider-slides" style="display:none;">
+                <li><img src="{% static "js/slider/images/1.jpg" %}" alt="1"/></li>
+                <li><img src="{% static "js/slider/images/2.jpg" %}" alt="2"/></li>
+                <li><img src="{% static "js/slider/images/3.jpg" %}" alt="3"/></li>
+                <li><img src="{% static "js/slider/images/4.jpg" %}" alt="4"/></li>
+            </ul>
+            <ul class="amazingslider-thumbnails" style="display:none;">
+                <li><img src="{% static "js/slider/images/1-tn.jpg" %}"/></li>
+                <li><img src="{% static "js/slider/images/2-tn.jpg" %}"/></li>
+                <li><img src="{% static "js/slider/images/3-tn.jpg" %}"/></li>
+                <li><img src="{% static "js/slider/images/4-tn.jpg" %}"/></li>
+            </ul>
+            <div class="amazingslider-engine" style="display:none;"><a href="#">Slider</a></div>
+        </div>
+
+    </div>
+    <!-- << container >> -->
+</div>
+<!-- << top container >> -->

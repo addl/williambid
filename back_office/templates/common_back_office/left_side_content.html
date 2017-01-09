@@ -1,0 +1,161 @@
+{% load staticfiles i18n %}
+
+<script>
+    $(function () {
+        fecha = "{{ user_info.membresia_fecha_limite.isoformat }}";
+        future_day = new Date(fecha);
+        futureDateUTC = new Date(future_day.getFullYear(),
+                future_day.getMonth(),
+                future_day.getDate(),
+                future_day.getHours(),
+                future_day.getMinutes(),
+                future_day.getSeconds()
+        );
+        clock = $("#membresia_clock");
+        $(clock).countdown(futureDateUTC, function (event) {
+            $(this).text(event.strftime('%D d - %H:%M:%S'));
+        }).on('update', function (e) {
+            console.log(e.offset);
+        });
+        /*Progress bar to membership expires*/
+        //var timeDiff = Math.abs(future_day.getTime() - new Date().getTime());
+        //var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+        days = Math.abs(futureDateUTC.getDate() - new Date().getDate());
+        //days = diffDays;
+        // el maximo de dias que una membresia vive es 30 dias
+        percent = (30 - days) * 100 / 30;
+        $('.progressG').animate({width: percent + "%"}, 1000);
+    })
+
+</script>
+
+<!-- Left side content -->
+<div id="leftSide">
+{#    <div class="logo"><a href="index.html"><img src="{% static "back_office/images/logo.png" %}" alt=""/></a></div>#}
+{#    <div class="sidebarSep mt0"></div>#}
+
+    <!-- Profile info-->
+    <div class="sideProfile" style="margin-top: 1em">
+        <div class="profileInfo">
+            <a href="#" title="" class="profileFace"><img src="{% static "back_office/images/user.png" %}" alt=""></a>
+            <span>{% trans "Hola:" %} <strong>{{ user.username }}</strong></span>
+            <span>{% trans "Ud tiene " %} {{ user_info.new_msgs }} {% trans "mensajes sin leer" %}</span>
+            <span>{% trans "Su URL en williambid:" %}</span>
+            <span>{{ user_info.share_url }}</span>
+        </div>
+    </div>
+
+    <div class="sidebarSep"></div>
+
+    <!-- General balance widget -->
+    <div class="genBalance">
+        <a href="#" title="" class="amount">
+            <span>{% trans "Balance general" %}</span>
+            <span class="balanceAmount">${{ general_balance }}</span>
+        </a>
+        <a href="#" title="" class="amChanges tipW" original-title="{% trans "Ver su banco William" %}">
+            <strong class="sPositive">+0.6%</strong>
+        </a>
+    </div>
+    <div class="genBalance">
+        <a href="/usuarios/back-office/administracion/banco/" class="amount">
+            <span>{% trans "Membresia" %}</span>
+            <span class="balanceAmount">{{ user.perfilusuario.membresia.tipo_membresia.nombre }}</span>
+        </a>
+        <a href="/usuarios/back-office/administracion/profile/better/membership" title=""
+           class="amChanges tipW" original-title="{% trans "Mejorar membres&iacute;a" %}">
+            <strong class="sPositive">&nbsp{% trans "Up" %}</strong>
+        </a>
+    </div>
+    <!-- Membresia fecha limite-->
+    <div class="nextUpdate">
+        <ul>
+            <li>{% trans "Valida durante:" %}</li>
+            <li>
+                <span id="membresia_clock"></span>
+            </li>
+        </ul>
+        <div class="pWrapper">
+            <div class="progressG" title="78%"></div>
+        </div>
+    </div>
+    <div class="genBalance">
+        <a href="#" title="" class="amount" style="width: 86%;">
+            <span>{% trans "Tipo Usuario" %}</span>
+            <span class="balanceAmount">{{ user.perfilusuario.tipo_usuario.nombre }}</span>
+        </a>
+{#        <a href="#" title="" class="amChanges">#}
+{#            <strong class="sPositive">&nbsp;</strong>#}
+{#        </a>#}
+    </div>
+
+    <div class="sidebarSep"></div>
+
+    <!-- Datos de membresia, tipo usuario, ptos-->
+    <div class="sRoundStats">
+        <ul>
+            <li>
+                {% trans "Red" %}
+                <a href="#" title="">
+                    <span class="roundPos">{{ user_info.cantidad_usuarios_en_red }}</span>
+                </a>
+            </li>
+            <li>
+                {% trans "Pujas" %}
+                <a href="#" title="">
+                    <span class="roundZero">{{ user_info.cantidad_de_bids }}</span>
+                </a>
+            </li>
+            <li>
+                {% trans "Puntos" %}
+                <a href="#" title="">
+                    <span class="roundNeg">{{ user_info.cantidad_de_puntos }}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="sidebarSep"></div>
+
+    <!-- Left navigation -->
+    <ul id="menu" class="nav">
+        <li class="dash">
+            <a href="/usuarios/back-office/" title="" class="active">
+                <span>{% trans "Mi Dashboard" %}</span>
+            </a>
+        </li>
+        <li class="dash">
+            <a href="/usuarios/back-office/administracion/shopping-cart/" title="">
+                <span>{% trans "Mi cesto" %}</span>
+                {% if user_info.shopping_cart_count > 0 %}
+                    <strong>{{ user_info.shopping_cart_count }}</strong>
+                {% endif %}
+            </a>
+        </li>
+        <li class="typo">
+            <a href="/usuarios/back-office/administracion/autopujas/" title="">
+                <span>{% trans "Auto-Pujas" %}</span>
+            </a>
+        </li>
+        <li class="messages">
+            <a href="/usuarios/back-office/administracion/mensajes/" title="">
+                <span>{% trans "Mensajes" %}</span>
+                {% if new_msgs > 0 %}
+                    <strong>{{ new_msgs }}</strong>
+                {% endif %}
+            </a>
+        </li>
+        <li class="forms">
+            <a href="/usuarios/back-office/administracion/profile/show/" title="" class="exp">
+                <span>{% trans "Configuraci&oacute;n" %}</span>
+                <!-- <strong>4</strong> -->
+            </a>
+        </li>
+        <li class="exit">
+            <a href="#" title="" class="exp">
+                <span>{% trans "Salir" %}</span>
+                <!-- <strong>4</strong> -->
+            </a>
+        </li>
+    </ul>
+</div>

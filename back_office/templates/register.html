@@ -1,0 +1,211 @@
+{% load staticfiles i18n %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    {% include 'common_back_office/back_office_meta_header.html' %}
+
+    <style type="text/css">
+        .errorlist, .alert-danger{
+            color: red;
+            font-weight: 600;
+        }
+    </style>
+
+</head>
+
+<body class="nobg loginPage">
+
+<!-- Top fixed navigation -->
+<div class="topNav">
+    <div class="wrapper">
+        <div class="userNav">
+            <ul>
+                <li>
+                    <a href="#" title="">
+                        <img src="{% static "back_office/images/icons/topnav/mainWebsite.png" %}" alt=""/>
+                        <span>{% trans "Regresar al sitio web" %}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="">
+                        <img src="{% static "back_office/images/icons/topnav/profile.png" %}" alt=""/>
+                        <span>{% trans "Contactar con el administrador" %}</span>
+                    </a>
+                </li>
+                <!--
+                <li>
+                    <a href="#" title="">
+                        <img src="images/icons/topnav/messages.png" alt=""/>
+                        <span>Support</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html" title="">
+                        <img src="images/icons/topnav/settings.png" alt=""/>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- Main content wrapper -->
+<div class="loginWrapper">
+    <div class="loginLogo"><img src="{% static "back_office/images/loginLogo.png" %}" alt=""/></div>
+    <div class="widget">
+        <div class="title"><img src="{% static "back_office/images/icons/dark/files.png" %}" alt="" class="titleIcon"/>
+            <h6>Login panel</h6></div>
+        <!-- <form action="index.html" id="validate" class="form">
+            <fieldset>
+                <div class="formRow">
+                    <label for="login">Username:</label>
+                    <div class="loginInput"><input type="text" name="login" class="validate[required]" id="login" /></div>
+                </div>
+
+                <div class="formRow">
+                    <label for="pass">Password:</label>
+                    <div class="loginInput"><input type="password" name="password" class="validate[required]" id="pass" /></div>
+                </div>
+
+                <div class="loginControl">
+                    <div class="rememberMe"><input type="checkbox" id="remMe" name="remMe" /><label for="remMe">Remember me</label></div>
+                    <input type="submit" value="Log me in" class="dredB logMeIn" />
+                </div>
+            </fieldset>
+        </form> -->
+        <form method="post" action="/usuarios/registro/" class="form">
+
+            {% csrf_token %}
+
+            {% if form.errors %}
+                <div class="alert alert-danger" style="max-width: 75%;">
+                    <p>{% trans "!!!Algunos campos requieren su atenci&oacute;n!!!" %}</p>
+                </div>
+            {% endif %}
+
+            {% if invitacion %}
+                <input type="hidden" name="invitacion" value="{{ invitacion }}"/>
+            {% endif %}
+
+            <div class="fluid">
+                <div class="formRow">
+                    <span class="span6">
+                        <label>{% trans "Usuario" %}</label>
+                        {{ form.username }}
+                        <div class="myerror">
+                            {{ form.errors.username }}
+                        </div>
+                    </span>
+                    <span class="span6">
+                        <label>{% trans "Direccion de correo" %}</label>
+                        {{ form.email }}
+                        <div class="myerror">
+                            {{ form.errors.email }}
+                        </div>
+                    </span>
+                </div>
+                <div class="formRow">
+                    <span class="span6">
+                        <label>{% trans "Contrase&ntilde;a" %}</label>
+                        {{ form.password1 }}
+                    </span>
+                    <span class="span6">
+                        <label>{% trans "Confirme contrase&ntilde;a" %}</label>
+                        {{ form.password2 }}
+                        <div class="myerror">
+                            {{ form.errors.password2 }}
+                        </div>
+                    </span>
+                </div>
+                <!-- Datos del perfil -->
+                <div class="formRow">
+                    <span class="span4">
+                        <label>{% trans "Direcci&oacute;n" %}</label>
+                        {{ form.direccion }}
+                        <div class="myerror">
+                            {{ form.errors.direccion }}
+                        </div>
+                    </span>
+                    <span class="span4">
+                        <label>{% trans "Ciudad" %}</label>
+                        {{ form.ciudad }}
+                        <div class="myerror">
+                            {{ form.errors.ciudad }}
+                        </div>
+                    </span>
+                    <span class="span4">
+                        <label>{% trans "Provincia" %}</label>
+                        {{ form.provincia }}
+                        <div class="myerror">
+                            {{ form.errors.provincia }}
+                        </div>
+                    </span>
+                </div>
+                <div class="formRow">
+                    <span class="span4">
+                        <label>{% trans "Pa&iacute;s" %}</label>
+                        {{ form.pais }}
+                        <div class="myerror">
+                            {{ form.errors.pais }}
+                        </div>
+                    </span>
+                    <span class="span4">
+                        <label>{% trans "Tel&eacute;fono" %}</label>
+                        {{ form.telefono }}
+                        <div class="myerror">
+                            {{ form.errors.telefono }}
+                        </div>
+                    </span>
+                    <span class="span4">
+                       <label>{% trans "Seud&oacute;nimo" %}</label>
+                       {{ form.seudonimo }}
+                       <div class="myerror">
+                           {{ form.errors.seudonimo }}
+                       </div>
+                   </span>
+                </div>
+                <div class="formRow">
+                   <span class="span6">
+                       <label>{% trans "Identificador Whatsapp" %}</label>
+                       {{ form.whatsapp_id }}
+                       <div class="myerror">
+                           {{ form.errors.whatsapp_id }}
+                       </div>
+                   </span>
+                   <span class="span6">
+                       <label>{% trans "Identificador Skype" %}</label>
+                       {{ form.skype_id }}
+                       <div class="myerror">
+                           {{ form.errors.skype_id }}
+                       </div>
+                   </span>
+                </div>
+                <div class="formRow">
+                    <span class="span8"></span>
+                    <span class="span4">
+                        <input type="submit" value="{% trans "Aceptar" %}" class="btn btn-primary pull-right"/>
+                    </span>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+
+<!-- Footer line -->
+<div id="footer">
+    <div class="wrapper">As usually all rights reserved. And as usually brought to you by <a
+            href="http://themeforest.net/user/Kopyov?ref=kopyov" title="">Eugene Kopyov</a></div>
+</div>
+
+
+</body>
+</html>

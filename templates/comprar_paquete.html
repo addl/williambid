@@ -1,0 +1,14 @@
+{% extends "common/main_content.html" %}
+
+{% load staticfiles i18n %}
+
+{% block bloque_principal %}
+
+    <div class="widget">
+        {% if paquete %}
+            <label>{% trans "Cantidad de bids" %}</label>
+            {{ paquete.cantidad_de_bids }}
+        {% endif %}
+    </div>
+
+{% endblock %}

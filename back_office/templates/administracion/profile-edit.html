@@ -1,0 +1,132 @@
+{% extends 'index_back_office.html' %}
+
+{% load staticfiles i18n %}
+
+{% block main_content %}
+
+    {% if form.errors %}
+        <div class="nNote nFailure hideit">
+            <p>{% trans "!!!Algunos campos requieren su atenci&oacute;n!!!" %}</p>
+        </div>
+    {% endif %}
+
+    <div class="widget">
+        <form class="form" action="/usuarios/back-office/administracion/profile/edit/" method="POST">
+            {% csrf_token %}
+
+
+            <div class="fluid">
+                <div class="formRow">
+                    <span class="span6">
+                        <label>{% trans "Username" %}</label>
+                        <input id="id_username" maxlength="20" name="username" type="text" value="{{ user.username }}">
+                        <div class="myerror">
+                            {{ form.error.username }}
+                        </div>
+                    </span>
+                    <span class="span6">
+                        <label>{% trans "Correo" %}</label>
+                        <input id="id_email" name="email" type="text" value="{{ user.email }}">
+                        <div class="myerror">
+                            {{ form.error.email }}
+                        </div>
+                    </span>
+                </div>
+                <div class="formRow">
+                    <span class="span6">
+                        <label>{% trans "Contraseña" %}</label>
+                        <input id="id_password1" name="password1" type="password" value="{{ user.password }}">
+                        <div class="my_error">
+                            {{ form.errors.password1 }}
+                        </div>
+                    </span>
+                    <span class="span6">
+                        <label>{% trans "Confirmar contraseña" %}</label>
+                        <input id="id_password2" name="password2" type="password" value="{{ user.password }}">
+                        <div class="myerror">
+                            {{ form.error.password2 }}
+                        </div>
+                    </span>
+                </div>
+                <!-- Datos del perfil -->
+                <div class="formRow">
+                    <span class="span4">
+                        <label>{% trans "Direccion" %}</label>
+                        <input id="id_direccion" name="direccion" type="text"
+                               value="{{ user.perfilusuario.direccion }}">
+                        <div class="myerror">
+                            {{ form.error.direccion }}
+                        </div>
+                    </span>
+                    <span class="span4">
+                        <label>{% trans "Ciudad" %}</label>
+                        <input id="id_ciudad" name="ciudad" type="text" value="{{ user.perfilusuario.ciudad }}">
+                        <div class="myerror">
+                            {{ form.error.ciudad }}
+                        </div>
+                    </span>
+                    <span class="span4">
+                        <label>{% trans "Provincia" %}</label>
+                        <input id="id_provincia" name="provincia" type="text"
+                               value="{{ user.perfilusuario.provincia }}">
+                        <div class="myerror">
+                            {{ form.error.provincia }}
+                        </div>
+                    </span>
+                </div>
+                <div class="formRow">
+                    <span class="span4">
+                        <label>{% trans "País" %}</label>
+                        <input id="id_pais" name="pais" type="text" value="{{ user.perfilusuario.pais }}">
+                        <div class="myerror">
+                            {{ form.error.pais }}
+                        </div>
+                    </span>
+                    <span class="span4">
+                        <label>{% trans "Teléfono" %}</label>
+                        <input id="id_telefono" name="telefono" type="text" value="{{ user.perfilusuario.telefono }}">
+                        <div class="myerror">
+                            {{ form.error.telefono }}
+                        </div>
+                    </span>
+                    <span class="span4">
+                       <label>{% trans "Seudonimo" %}</label>
+                       <input id="id_seudonimo" name="seudonimo" type="text" value="{{ user.perfilusuario.seudonimo }}">
+                       <div class="myerror">
+                            {{ form.error.seudonimo }}
+                       </div>
+                   </span>
+                </div>
+                <div class="formRow">
+                   <span class="span6">
+                       <label>{% trans "Identificador Whatsapp" %}</label>
+                       <input id="id_whatsapp_id" name="whatsapp_id" type="text"
+                              value="{{ user.perfilusuario.whatsapp_id }}">
+                       <div class="myerror">
+                            {{ form.error.whatsapp_id }}
+                       </div>
+                   </span>
+                   <span class="span6">
+                       <label>{% trans "Identificador Skype" %}</label>
+                       <input id="id_skype_id" name="skype_id" type="text" value="{{ user.perfilusuario.skype_id }}">
+                       <div class="myerror">
+                            {{ form.error.skype_id }}
+                       </div>
+                   </span>
+                </div>
+                <div class="formRow">
+                <span class="span6">
+                    &nbsp;
+                </span>
+                <span class="span6">
+                    <a href="#" title="" class="wButton redwB ml15 m10">
+                        <span>{% trans "Cancelar" %}</span>
+                    </a>
+                    <input type="submit" value="{% trans "Modificar" %}" class="">
+                </span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,109 @@
+{% load staticfiles i18n %}
+
+
+<div id="content" class="clearfix">&nbsp;</div>
+
+<!-- <div align="center"><img src="{ static "img/payment.jpg" %}" alt=""/></div> -->
+
+<div id="footer-border" class="section">&nbsp;</div>
+
+<div id="footer-top-outside">
+
+    <div id="customHome" class="container">
+        <div id="twitter_footer2" class="column grid">
+            <h2>WilliamBID.com</h2>
+            <ul class="footer_menu">
+                <li>
+                    <a href="/">{% trans "Inicio" %}</a>
+                </li>
+                <li>
+                    <a href="/">{% trans "Sobre nosotros" %}</a>
+                </li>
+                <li>
+                    <a href="/">{% trans "Oportunidad de negocio" %}</a>
+                </li>
+                <li>
+                    <a href="/">{% trans "Planes de compenasación" %}</a>
+                </li>
+            </ul>
+        </div>
+        <!-- << about us footer >> -->
+
+        <div id="twitter_footer" class="column grid">
+            <h2>{% trans "Redes Sociales" %}</h2>
+            is a powerful, beautifully designed theme. It comes with unlimited colours,
+        </div>
+        <!-- << twitter footer >> -->
+        <div id="twitter_footer3" class="column grid">
+            <h2>
+                {% blocktrans %}
+                    Pago &amp; Envio
+                {% endblocktrans %}
+            </h2>
+            <ul>
+                <li>
+                    <img src="{% static "img/payments/visa.jpg" %}">
+                </li>
+                <li>
+                    <img src="{% static "img/payments/aexpress.jpg" %}">
+                </li>
+                <li>
+                    <img src="{% static "img/payments/mastercard.jpg" %}">
+                </li>
+                <li>
+                    <img src="{% static "img/payments/discover.jpg" %}">
+                </li>
+                <li>
+                    <img src="{% static "img/payments/citibank.jpg" %}">
+                </li>
+                <li>
+                    <img src="{% static "img/payments/cicibank.jpg" %}">
+                </li>
+                <li>
+                    <img src="{% static "img/payments/paypal.jpg" %}">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- << custom Home >> -->
+</div>
+
+<div id="" class="extrafooter">
+    <span style="color: red; font-weight: 600">WILLIAMBID.COM</span> {% trans "Todos los derechos reservados" %} © 2016
+</div>
+
+<!-- << container >> -->
+
+
+<script src="{% static "js/williambid/nivo.slider.pack.js" %}" type="text/javascript"></script>
+<script src="{% static "js/williambid/jcarousel.min.js" %}" type="text/javascript"></script>
+<script src="{% static "js/williambid/colorpicker.js" %}" type="text/javascript"></script>
+<!-- <script src="{ static "js/williambid/common.js" %}" type="text/javascript"></script> -->
+<!-- <script src="{ static "js/williambid/custom.js" %}" type="text/javascript"></script> -->
+<!-- <script type="text/javascript" src="{ static "js/williambid/menu_flotante.js" %}"></script> -->
+<!-- <script type="text/javascript" src="{ static "js/williambid/jquery.fancybox.js" %}"></script> -->
+<script src="{% static "js/williambid/jquery-ui.js" %}"></script>
+<script type="text/javascript">
+
+    $(function () {
+        $("#tabs").tabs();
+    });
+
+
+    $(document).ready(parpadear);
+    function parpadear() {
+        $('#parp1,#parp2,#parp3,#parp4').fadeIn(100).delay(800).fadeOut(100, parpadear)
+    }
+
+    $(document).ready(function () {
+    });
+
+    $(document).ready(function () {
+        //$('#slideshow').nivoSlider();
+    });
+
+</script>
+{% block javascripts %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+{% extends 'index_back_office.html' %}
+{% load staticfiles i18n %}
+
+{% block main_content %}
+
+    {% if mensajes.items %}
+        <div class="widget">
+            <div class="tabs ui-tabs ui-widget ui-widget-content ui-corner-all">
+                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"
+                    role="tablist">
+                    {% for username, msglist in mensajes.iteritems %}
+                        <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab"
+                            tabindex="0"
+                            aria-controls="tabs-1" aria-labelledby="ui-id-2" aria-selected="true">
+                            <a href="#{{ username }}" class="ui-tabs-anchor" role="presentation" tabindex="-1"
+                               id="ui-id-2">
+                                {{ username }}
+                            </a>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+                {% for username, msglist in mensajes.iteritems %}
+                    <div id="#{{ username }}" aria-labelledby="ui-id-2"
+                         class="ui-tabs-panel ui-widget-content ui-corner-bottom"
+                         role="tabpanel" aria-expanded="true" aria-hidden="false" style="display: block;">
+                        {% for msg in msglist %}
+                            {{ msg.mensaje }}
+                            <hr>
+                        {% endfor %}
+
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    {% endif %}
+
+
+
+    <form action="/usuarios/back-office/administracion/mensajes/send/" class="form" method="POST">
+
+        {% csrf_token %}
+
+        <div class="widget">
+            <div class="title">
+                <img src="{% static "back_office/images/icons/dark/ichat.png" %}" alt="" class="titleIcon"/>
+                <h6>{% trans "Enviar mensaje" %}</h6>
+            </div>
+            <div class="formRow">
+                <label>{% trans "Enviar a:" %}</label>
+
+                <div class="formRight">
+                    <select name="user_to">
+                        <option value="opt1">{% trans "Seleccione un usuario" %}</option>
+                        {% for user in user_red %}
+                            <option value="{{ user }}">{{ user }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="formRow">
+                <label>{% trans "Mensaje:" %}</label>
+
+                <div class="formRight">
+                        <textarea rows="8" cols="" name="message" class="autoGrow lim"
+                                  placeholder="Type something">
+                        </textarea>
+                </div>
+            </div>
+            <div class="formRow">
+                <input type="submit">
+            </div>
+
+        </div>
+
+    </form>
+
+{% endblock %}

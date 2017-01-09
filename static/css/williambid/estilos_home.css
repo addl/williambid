@@ -1,0 +1,390 @@
+@charset "UTF-8";
+.foot {
+	font-family: 'Quattrocento Sans', 'Muli',Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: none;
+}
+img{
+	border: 0px;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-repeat: repeat-x;
+}
+
+#wrapper {
+    height: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 0;
+    width: 950px;
+    z-index: 1;
+}
+
+body#pg_contacto #wrapper {
+	position:relative;
+	top:0px;
+	width:950px;
+	height:1000px;
+	z-index:1;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.grey {
+	color: #999;
+	line-height: 16px;
+}
+#top {
+	position:absolute;
+	left:39px;
+	top:0;
+	width:874px;
+	height:120px;
+	z-index:1;
+}
+.top a{
+	/*font-family: 'Doppio One', sans-serif; Fuente Anterior */
+	font-family:Verdana,Arial;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #FFF;
+	text-decoration: none;
+}
+.top a:hover {
+	/*font-family: 'Doppio One', sans-serif;*/
+	font-family:Verdana,Arial;
+
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #E1263D;
+	text-decoration: none;
+}
+.one {
+	width: 145px;
+	height: 23px;
+	border: none;
+	padding: 2px 0 0 5px;
+	background-image: url(file:///E|/TRABAJOS/101%20TRABAJOS%20GOMERO/DARBID/shopcart-html/images/form_bg.jpg);
+	background-repeat: no-repeat;
+	font-family: 'Quattrocento Sans', 'Muli',Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+}
+#white_blocks {
+	position:absolute;
+	left:0px;
+	top:420px;
+	width:921px;
+	height:auto;
+	z-index:2;
+	background-image: url(file:///E|/TRABAJOS/101%20TRABAJOS%20GOMERO/DARBID/shopcart-html/images/white_bgs.png);
+	padding-top: 15px;
+	padding-right: 14px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+}
+.menu2 {
+	font-family: 'Doppio One', sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #FFF;
+	text-decoration: none;
+	background-image: url(file:///E|/TRABAJOS/101%20TRABAJOS%20GOMERO/DARBID/shopcart-html/images/menu2.png);
+	height: 31px;
+	margin-top: 20px;
+	text-align: center;
+	line-height: 30px;
+	background-repeat: no-repeat;
+}
+.tit {
+	font-family: 'Doppio One', sans-serif;
+	font-size: 25px;
+	text-transform: uppercase;
+	color: #000;
+	text-decoration: none;
+}
+.tit a{
+	color: #000;
+	text-decoration: none;
+}
+.tit a:hover{
+	color: #FF0000;
+}
+.news_date{
+	font-family: 'Quattrocento Sans', 'Muli',Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	padding-right:7px;
+	padding-top:2px;
+}
+
+.fecha_noticiaopen{
+	width:420px;
+	height:21px;
+	padding-top:4px;
+	padding-right:5px;
+	background-image:url(file:///E|/TRABAJOS/101%20TRABAJOS%20GOMERO/DARBID/shopcart-html/images/bg_fecha_noticiaopen.jpg);
+	background-position:0 0;
+	background-repeat:no-repeat;
+	text-align:right;
+	color:#fff;
+}
+
+.tit_light {
+	font-family: 'Quattrocento Sans', 'Muli',Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: #000;
+	text-decoration: none;
+/*	text-transform: capitalize;*/
+}
+.date {
+	font-family: 'Quattrocento Sans', 'Muli',Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 15px;
+	color: #999;
+	text-decoration: none;
+}
+#bottom {
+	background-color: #000;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.line {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+}
+.tweet {
+	background-image: url(file:///E|/TRABAJOS/101%20TRABAJOS%20GOMERO/DARBID/shopcart-html/images/twitter.png);
+	height: 210px;
+	background-repeat: no-repeat;
+	padding: 20px;
+	margin-top: 20px;
+	cursor:pointer;
+}
+.linea_menu {
+	font-family: 'Doppio One', sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #666;
+	text-decoration: none;
+	height: 31px;
+	margin-top: 20px;
+	line-height: 26px;
+	font-weight: normal;
+}
+.linea_menu2 {
+	font-family: 'Doppio One', sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #b30f16;
+	text-decoration: none;
+	height: 31px;
+	margin-top: 20px;
+	line-height: 30px;
+	font-weight: normal;
+}
+.noticias_intro {
+	margin-top: 20px;
+}
+
+#image_slider {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:950px;
+	height:500px;
+	z-index:2;
+}
+.promo_slide {
+	padding-top: 40px;
+	background-image: url(file:///E|/TRABAJOS/101%20TRABAJOS%20GOMERO/DARBID/shopcart-html/images/prom_bg.png);
+	background-repeat:no-repeat;
+	background-position:0 0;
+	padding-right: 5px;
+	padding-left: 4px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	height: 299px;
+}
+#apDiv1 {
+	position:absolute;
+	left:1297px;
+	top:74px;
+	width:50px;
+	height:134px;
+	z-index:2;
+}
+#fuso {
+	position:absolute;
+	left:960px;
+	top:29px;
+	width:65px;
+	height:152px;
+	z-index:3;
+}
+
+a.leermas{
+
+	width:84px;
+	height:23px;
+	display:block;
+	background-image:url(file:///E|/TRABAJOS/101%20TRABAJOS%20GOMERO/DARBID/shopcart-html/images/btn_leer.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+}
+
+a:hover.leermas{
+
+	background-image:url(file:///E|/TRABAJOS/101%20TRABAJOS%20GOMERO/DARBID/shopcart-html/images/btn_leer.png);
+	background-position:-84px 0;
+	background-repeat:no-repeat;
+}
+
+
+/* Slide Principal */
+div#home_mask_slide{
+	width:950px;
+	height:500px;
+	position: relative;
+	overflow: hidden;
+}
+
+div#slide_detec{
+	width:950px;
+	height:500px;
+	position: absolute;
+	cursor: pointer;
+	background-image: url(file:///E|/TRABAJOS/101%20TRABAJOS%20GOMERO/DARBID/shopcart-html/images/slide_home_principal/bg_slide_detec.png);
+}
+
+div#left_arrow{
+	width:78px;
+	height:100px;
+	display: block;
+	margin-top:170px;
+	float:left;
+	position:absolute;
+	background-image:url(file:///E|/TRABAJOS/101%20TRABAJOS%20GOMERO/DARBID/shopcart-html/images/slide_home_principal/left-arrow.png);
+	cursor: pointer;
+}
+
+div#right_arrow{
+	width:78px;
+	height:100px;
+	display: block;
+	margin-left:872px;
+	margin-top:170px;
+	float:left;
+	position:absolute;
+	background-image:url(file:///E|/TRABAJOS/101%20TRABAJOS%20GOMERO/DARBID/shopcart-html/images/slide_home_principal/right-arrow.png);
+	cursor:pointer;
+}
+
+div#home_container_slide {
+	width:auto;
+	height:500px;
+	position: absolute;
+}
+
+div#home_container_slide ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+div#home_container_slide ul li{
+	float:left;
+}
+
+div.menu_normal{
+	width: 45px;
+	height: 300px;
+	position: absolute;
+	top: 40px;
+	left: 50%;
+	margin-left: 485px;
+	z-index: 999;
+}
+
+div.menu_floatderecha{
+	width:20px;
+	height:180px;
+	overflow: hidden;
+	position:absolute;
+	top:10px;
+	right:0;
+	margin-right:0;
+	z-index:999;
+}
+
+
+
+div#menu_flotante ul{
+	width:45px;
+	height:180px;
+	/*background-image:url("file:///E|/TRABAJOS/101 TRABAJOS GOMERO/DARBID/shopcart-html/images/bg_menu_flotante.png");*/
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+div#menu_flotante ul li{
+	width:40px;
+	height:40px;
+	margin:0;
+	display: block;
+	padding-bottom: 3px;
+}
+
+div#menu_flotante ul li a{
+	width: 40px;
+	height: 40px;
+	display: block;
+}
+
+div#menu_flotante ul li.icohome{
+
+	background-image:url(../img/icohome.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+}
+
+div#menu_flotante ul li.icofacebook{
+
+	background-image:url(../img/icofacebook.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+}
+div#menu_flotante ul li.icotwitter{
+
+	background-image:url(../img/icotwitter.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+}
+
+div#menu_flotante ul li.icou2{
+
+	background-image:url(../img/icou2.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+}
+
+div#menu_flotante ul li.iconoticias{
+
+	background-image:url(../img/iconoticias.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+}
+
+div#menu_flotante ul li.icomail{
+
+	background-image:url(../img/icomail.png);
+	background-repeat:no-repeat;
+}

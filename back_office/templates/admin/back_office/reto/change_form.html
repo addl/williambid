@@ -1,0 +1,57 @@
+{% extends 'admin/change_form.html' %}
+{% load staticfiles %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <script src="{% static 'js/jquery/jquery-2.0.0.js' %}"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#id_tipo_reto').change(function () {
+                plan = parseInt($(this).val());
+                switch (plan) {
+                    case 1:
+                        disable_field('dinero_paquetes_de_pujas');
+                        enable_field('membresia');
+                        enable_field('personas');
+                        enable_tiempo();
+                        break;
+                    case 2:
+                        disable_field('dinero_paquetes_de_pujas');
+                        enable_field('personas');
+                        enable_tiempo();
+                        enable_field('membresia');
+                        break;
+                    case 3:
+                        disable_field('personas');
+                        disable_field('membresia');
+                        disable_tiempo();
+                        enable_field('dinero_paquetes_de_pujas');
+                        break;
+                    default :
+                        break;
+                }
+            });
+        });
+
+
+        disable_field = function (field) {
+            elem = $('#id_' + field);
+            console.log(elem);
+            $(elem).attr('disabled', 'disabled');
+        }
+        enable_field = function (field) {
+            $('#id_' + field).removeAttr('disabled');
+        }
+        enable_tiempo = function () {
+            $('#id_tiempo_0').removeAttr('disabled');
+            $('#id_tiempo_1').removeAttr('disabled');
+        }
+        disable_tiempo = function (field) {
+            $('#id_tiempo_0').attr('disabled', 'disabled');
+            $('#id_tiempo_1').attr('disabled', 'disabled');
+        }
+    </script>
+
+
+
+{% endblock %}

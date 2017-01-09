@@ -1,0 +1,59 @@
+{% extends 'index_back_office.html' %}
+{% load staticfiles i18n %}
+
+{% block main_content %}
+
+    <div class="widget">
+        <div class="title">
+            <img src="{% static "back_office/images/icons/dark/frames.png" %}" alt="" class="titleIcon">
+            <h6>{% trans "Mis autopujas" %}</h6>
+            <div class="num">
+                <a href="#" class="blueNum">{{ autopujas | length }}</a>
+            </div>
+        </div>
+        <table cellpadding="0" cellspacing="0" width="100%" class="sTable taskWidget">
+            <thead>
+            <td>ID</td>
+            <td>{% trans "Cantidad de bids" %}</td>
+            <td>{% trans "Art&iacute;culo" %}</td>
+            <td>{% trans "Opciones" %}</td>
+            </thead>
+            <tbody>
+            {% for autopuja in autopujas %}
+                <tr>
+                    <td class="taskPr">
+                        <a href="#" title="">{{ autopuja.id }}</a>
+                    </td>
+                    <td>
+                        <span>{{ autopuja.cantidad_pujas }}</span>
+                    </td>
+                    <td>
+                        <span class="green f11">{{ autopuja.articulo.content_ptr.nombre }}</span>
+                    </td>
+                    <td class="actBtns">
+                        <a href="/usuarios/back-office/administracion/autopujas/edit?autopuja_id={{ autopuja.id }}"
+                           class="tipS" original-title="Edit">
+                            <img src="{% static "back_office/images/icons/edit.png" %}" alt="">
+                        </a>
+                        <a href="/usuarios/back-office/administracion/autopujas/delete?autopuja_id={{ autopuja.id }}"
+                           class="tipS" original-title="Remove">
+                            <img src="{% static "back_office/images/icons/remove.png" %}" alt="">
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="/usuarios/back-office/administracion/autopujas/add/" title="" class="button redB">
+                        <span>{% trans "Adicionar Autopuja" %}</span>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

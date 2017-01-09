@@ -1,0 +1,148 @@
+{% load static i18n %}
+
+<div id="content-right">
+
+    <div id="search">
+        <div class="BoxMdl">
+            <div class="back-btn-txt" style="float:left;">
+                <input id="buscador" class="ui-txt" placeholder="Buscar..."/>
+            </div>
+            <div id="btnBuscar" onclick="if ($('#buscador').val() != '') {
+                                            $('#querysearch').val($('#buscador').val());
+                                            $('#seacrhform').submit();
+                                        }">
+            </div>
+                                <span onclick="if ($('#buscador').val() != '') {
+                                            $('#querysearch').val($('#buscador').val());
+                                            $('#seacrhform').submit();
+                                        }" class="ico qtip" qtip="Buscar Subastas" title="">
+                                </span>
+
+            <form id="seacrhform" style="display:none" action="/search/"
+                  method="get">
+                <input name="querysearch" type="hidden" id="querysearch">
+            </form>
+        </div>
+        <div class="boxDr"></div>
+    </div>
+
+
+    <!--
+       rules:// Listado de Reglas, cada una contiene: $i.ico, $i.name, $i.info
+    -->
+    <div class="type-bids-content">
+        <div class="top-type-bids"></div>
+
+        <div class="botton-type-bids"></div>
+    </div>
+
+
+    <!--
+    Paquetes de credito
+    buyurl: //lisk al apartado de comprar paquetes
+    packs: //lsitado de paquetes cada item contiene: $i.id,$i.pcrd, $i.fcrd, $i.totalprice, $i.unitprice, $i.status
+    -->
+    {% block bloque1_lateral %}
+        <div class="content-credit">
+            <div class="subBox-green" id="listPackContainer" style="height: 291px; ">
+
+                <div class="garantia" align="right"></div>
+                <div class="credit-paquet-title">
+                    <span>COMPRAR PUJAS</span>
+                </div>
+
+                <table cellpadding="0" cellspacing="0" width="100%" class="sTable taskWidget pujas_pkt_table">
+                    <thead>
+                    <tr>
+                        <td>{% trans "Pujas" %}</td>
+                        <td>{% trans "Precio" %}</td>
+                        <td>{% trans "Ahorro" %}</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for pkte in paquetes_de_pujas %}
+                        <tr>
+                            <td class="taskPr">
+                                <a href="#" title="">{{ pkte.cantidad_de_bids }}</a>
+                            </td>
+                            <td>
+                                <span class="green f11">{{ pkte.precio }}</span>
+                            </td>
+                            <td class="actBtns">
+                                <a href="/paquetes-bid/comprar/{{ pkte.id }}"
+                                   class="tooltip_buy_pkt" original-title="{% trans "Comprar paquete" %}">
+                                    <img src="{% static "back_office/images/icons/dark/basket.png" %}" alt="">
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="bottom-green-credit"></div>
+        </div>
+    {% endblock %}
+
+    <div class="content-credit">
+        <div class="subBox-green" id="listPackContainer" style="height: 291px; ">
+            <div class="credit-paquet-title">
+                <span>{% trans "Próximas Subastas" %}</span>
+            </div>
+
+            <div id="listPack">
+                <marquee behavior="scroll" direction="up" scrollamount="1" scrolldelay="1"
+                         onmouseover="this.stop()" onmouseout="this.start()" style="height: 70px;"
+                         height="40" width="100%">
+                    &bull;
+                    Teléfono Celular Motorola v3<br/>
+                    &bull;
+                    IPhone Touch 32Gb teléfono<br/>
+                </marquee>
+                <div class="clr"></div>
+                <div class="separatorhorizontalbtn"></div>
+            </div>
+        </div>
+        <div class="bottom-green-credit"></div>
+    </div>
+
+    <div class="content-credit">
+        <div class="subBox-green" id="listPackContainer" style="height: 291px; ">
+            <div class="credit-paquet-title">
+                <span>{% trans "Últimos Ganadores" %}</span>
+            </div>
+
+            <div id="listPack">
+                <marquee behavior="scroll" direction="up" scrollamount="1" scrolldelay="1"
+                         onmouseover="this.stop()" onmouseout="this.start()" style="height: 70px;"
+                         height="40" width="100%">
+                    {% for p in ultimas_subastas %}
+                        &bull;
+                        {{ p.ganador.username }}
+                        <br/>
+                    {% endfor %}
+                </marquee>
+                <div class="clr"></div>
+                <div class="separatorhorizontalbtn"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-credit">
+        <div class="subBox-green" id="listPackContainer" style="height: 291px; ">
+            <div class="credit-paquet-title">
+                <span>{% trans "Usuarios en línea" %}</span>
+            </div>
+
+            <div id="listPack">
+                <div id="online_users">{{ usuarios_en_linea }}</div>
+                <div class="clr"></div>
+                <div class="separatorhorizontalbtn"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Share in social media -->
+    {% include "common/social_full.html" %}
+
+</div>

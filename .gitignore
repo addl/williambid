@@ -1,0 +1,10 @@
+william.iws
+celerybeat-schedule
+.idea/workspace.xml
+.idea/**
+william_virtual_env/
+logs/
+*.pyc
+.idea/
+requiremets.txt
+static/tools/

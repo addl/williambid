@@ -1,0 +1,50 @@
+{% extends 'index_back_office.html' %}
+{% load staticfiles %}
+
+{% load i18n %}
+
+{% block main_content %}
+
+    <div class="widget">
+        <form action="/usuarios/invitacion/" method="post">
+            {% csrf_token %}
+            <fieldset>
+                <legend>{% trans "Enviar invitaci&oacute;n" %}</legend>
+                <label>{% trans "Nombre de destinatario" %}:</label>
+                <input type="text" name="to_user"/>
+
+                <label>{% trans "Correo del destinatario" %}:</label>
+                <input type="text" name="to_email">
+                <input type="submit" value="Invitar">
+            </fieldset>
+        </form>
+
+    </div>
+
+    <div class="widget">
+        <div class="chart" id="OrganiseChart6"></div>
+    </div>
+
+
+    <link rel="stylesheet" href="{% static "back_office/js/treant-js-master/Treant.css" %}">
+    <link rel="stylesheet" href="{% static "back_office/js/treant-js-master/examples/tennis-draw/example7.css" %}">
+
+    <script src="{% static "back_office/js/treant-js-master/vendor/raphael.js" %}"></script>
+    <script src="{% static "back_office/js/treant-js-master/Treant.js" %}"></script>
+    <script src="{% static "back_office/js/treant-js-master/examples/tennis-draw/example7.js" %}"></script>
+    <script src="{% static 'js/back-office/red/red.js' %}"></script>
+
+    <script>
+        var username = '{{ user.username }}';
+        {% if  user.is_superuser%}
+            var username = null;
+        {% endif %}
+        $
+        (document).ready(function () {
+            obtener_red_de_usuario(username, tree_structure.nodeStructure);
+        });
+    </script>
+
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+@import url("tabs.css");
+@import url("retos.css");
+@import url("cuentas.css");
+
+.menu_office ul {
+    margin: 10px 2px;
+    list-style: none;
+    padding: 0;
+}
+
+.menu_office ul li {
+    padding: 2px 2px;
+    border-radius: 1px;
+}
+
+.menu_office ul li:hover {
+    /*background-color: #C00;*/
+    border-bottom: 2px solid #262626;
+}

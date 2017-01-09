@@ -1,0 +1,1166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-17 16:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: back_office/templates/administracion/autopujas.html:9
+msgid "Mis autopujas"
+msgstr ""
+
+#: back_office/templates/administracion/autopujas.html:17
+#: templates/comprar_paquete.html:9
+msgid "Cantidad de bids"
+msgstr ""
+
+#: back_office/templates/administracion/autopujas.html:18
+#: back_office/templates/administracion/edit_auto_puja.html:36
+msgid "Art&iacute;culo"
+msgstr ""
+
+#: back_office/templates/administracion/autopujas.html:19
+#: back_office/templates/administracion/improve_membership.html:19
+#: back_office/templates/administracion/publicidad.html:25
+#: back_office/templates/administracion/shopingcart.html:53
+msgid "Opciones"
+msgstr ""
+
+#: back_office/templates/administracion/autopujas.html:51
+#: back_office/templates/administracion/edit_auto_puja.html:48
+msgid "Adicionar Autopuja"
+msgstr ""
+
+#: back_office/templates/administracion/bank.html:23
+msgid "Estado por plan de compensacion"
+msgstr ""
+
+#: back_office/templates/administracion/bank.html:30
+msgid "No. Plan"
+msgstr ""
+
+#: back_office/templates/administracion/bank.html:31
+#: back_office/templates/administracion/publicidad.html:23
+msgid "Nombre"
+msgstr ""
+
+#: back_office/templates/administracion/bank.html:33
+msgid "Minimo Tipo de usuario"
+msgstr ""
+
+#: back_office/templates/administracion/bank.html:34
+msgid "Minima Membresia"
+msgstr ""
+
+#: back_office/templates/administracion/bank.html:35
+msgid "Cantidad de usuarios en red"
+msgstr ""
+
+#: back_office/templates/administracion/bank.html:36
+msgid "Cantidad de dinero"
+msgstr ""
+
+#: back_office/templates/administracion/bank.html:37
+msgid "Cantidad de puntos"
+msgstr ""
+
+#: back_office/templates/administracion/bank.html:58
+msgid "Estad&iacute;sticas por plan"
+msgstr ""
+
+#: back_office/templates/administracion/bank.html:64
+msgid "Plan"
+msgstr ""
+
+#: back_office/templates/administracion/bank.html:65
+msgid "Cantidad"
+msgstr ""
+
+#: back_office/templates/administracion/bank.html:66
+#: back_office/templates/administracion/publicidad.html:24
+msgid "Descripci&oacute;n"
+msgstr ""
+
+#: back_office/templates/administracion/bank.html:67
+msgid "&Uacute;ltimo Dep&oacute;sito"
+msgstr ""
+
+#: back_office/templates/administracion/bids_packages.html:16
+#: templates/all_packages.html:16
+msgid "Contiene:"
+msgstr ""
+
+#: back_office/templates/administracion/bids_packages.html:19
+#: templates/all_packages.html:19
+msgid "Comprar"
+msgstr ""
+
+#: back_office/templates/administracion/edit_auto_puja.html:19
+msgid "Edit Autopuja"
+msgstr ""
+
+#: back_office/templates/administracion/edit_auto_puja.html:21
+msgid "Add Autopuja"
+msgstr ""
+
+#: back_office/templates/administracion/edit_auto_puja.html:30
+msgid "Cantidad de pujas"
+msgstr ""
+
+#: back_office/templates/administracion/improve_membership.html:9
+#: back_office/templates/administracion/shopingcart.html:43
+msgid "Carrito de compra"
+msgstr ""
+
+#: back_office/templates/administracion/improve_membership.html:16
+#: back_office/templates/administracion/shopingcart.html:50
+msgid "No."
+msgstr ""
+
+#: back_office/templates/administracion/improve_membership.html:17
+#: back_office/templates/administracion/shopingcart.html:51
+msgid "Art&iacute;culo ganado"
+msgstr ""
+
+#: back_office/templates/administracion/improve_membership.html:18
+#: back_office/templates/administracion/shopingcart.html:52
+#: templates/common/seccion_derecha.html:58
+msgid "Precio"
+msgstr ""
+
+#: back_office/templates/administracion/messages.html:48
+msgid "Enviar mensaje"
+msgstr ""
+
+#: back_office/templates/administracion/messages.html:51
+msgid "Enviar a:"
+msgstr ""
+
+#: back_office/templates/administracion/messages.html:55
+msgid "Seleccione un usuario"
+msgstr ""
+
+#: back_office/templates/administracion/messages.html:64
+msgid "Mensaje:"
+msgstr ""
+
+#: back_office/templates/administracion/pago.html:21
+msgid "Est&aacute;s a punto de comprar los siguientes productos"
+msgstr ""
+
+#: back_office/templates/administracion/profile-edit.html:9
+#: back_office/templates/administracion/profile-show.html:9
+#: back_office/templates/register.html:88
+msgid "!!!Algunos campos requieren su atenci&oacute;n!!!"
+msgstr ""
+
+#: back_office/templates/administracion/profile-edit.html:21
+msgid "Username"
+msgstr ""
+
+#: back_office/templates/administracion/profile-edit.html:28
+#: back_office/templates/administracion/profile-show.html:38
+msgid "Correo"
+msgstr ""
+
+#: back_office/templates/administracion/profile-edit.html:37
+#: templates/common/header_login.html:28
+msgid "Contraseña"
+msgstr ""
+
+#: back_office/templates/administracion/profile-edit.html:44
+msgid "Confirmar contraseña"
+msgstr ""
+
+#: back_office/templates/administracion/profile-edit.html:54
+#: back_office/templates/administracion/profile-show.html:47
+msgid "Direccion"
+msgstr ""
+
+#: back_office/templates/administracion/profile-edit.html:62
+#: back_office/templates/administracion/profile-show.html:53
+#: back_office/templates/register.html:136
+msgid "Ciudad"
+msgstr ""
+
+#: back_office/templates/administracion/profile-edit.html:69
+#: back_office/templates/administracion/profile-show.html:59
+#: back_office/templates/register.html:143
+msgid "Provincia"
+msgstr ""
+
+#: back_office/templates/administracion/profile-edit.html:79
+#: back_office/templates/administracion/profile-show.html:67
+msgid "País"
+msgstr ""
+
+#: back_office/templates/administracion/profile-edit.html:86
+#: back_office/templates/administracion/profile-show.html:73
+msgid "Teléfono"
+msgstr ""
+
+#: back_office/templates/administracion/profile-edit.html:93
+#: back_office/templates/administracion/profile-show.html:79
+msgid "Seudonimo"
+msgstr ""
+
+#: back_office/templates/administracion/profile-edit.html:102
+#: back_office/templates/register.html:175
+msgid "Identificador Whatsapp"
+msgstr ""
+
+#: back_office/templates/administracion/profile-edit.html:110
+#: back_office/templates/register.html:182
+msgid "Identificador Skype"
+msgstr ""
+
+#: back_office/templates/administracion/profile-edit.html:123
+msgid "Cancelar"
+msgstr ""
+
+#: back_office/templates/administracion/profile-edit.html:125
+msgid "Modificar"
+msgstr ""
+
+#: back_office/templates/administracion/profile-show.html:16
+msgid "Perfil de usuario"
+msgstr ""
+
+#: back_office/templates/administracion/profile-show.html:24
+msgid "Avatar"
+msgstr ""
+
+#: back_office/templates/administracion/profile-show.html:32
+#: back_office/templates/register.html:99 templates/common/header_login.html:27
+msgid "Usuario"
+msgstr ""
+
+#: back_office/templates/administracion/profile-show.html:87
+msgid "Whatsapp ID"
+msgstr ""
+
+#: back_office/templates/administracion/profile-show.html:93
+msgid "Skype ID"
+msgstr ""
+
+#: back_office/templates/administracion/profile-show.html:108
+msgid "Editar perfil"
+msgstr ""
+
+#: back_office/templates/administracion/publicidad.html:44
+msgid "Descargar"
+msgstr ""
+
+#: back_office/templates/administracion/red_miembros.html:12
+msgid "Enviar invitaci&oacute;n"
+msgstr ""
+
+#: back_office/templates/administracion/red_miembros.html:13
+msgid "Nombre de destinatario"
+msgstr ""
+
+#: back_office/templates/administracion/red_miembros.html:16
+msgid "Correo del destinatario"
+msgstr ""
+
+#: back_office/templates/administracion/shopingcart.html:7
+msgid "Eliminar art&iacute;culo ganado"
+msgstr ""
+
+#: back_office/templates/administracion/shopingcart.html:10
+msgid ""
+"Est&aacute;s a punto de eliminar un art&iacute;culo que ganaste en una "
+"subasta"
+msgstr ""
+
+#: back_office/templates/administracion/shopingcart.html:13
+msgid "Est&aacute;s seguro de continuar"
+msgstr ""
+
+#: back_office/templates/administracion/shopingcart.html:85
+msgid "Realizar pago"
+msgstr ""
+
+#: back_office/templates/administracion/shopingcart.html:91
+#: back_office/templates/administracion/shopingcart.html:96
+msgid "Lo sentimos, Ud no tiene art&iacute;culos ganados actualmente"
+msgstr ""
+
+#: back_office/templates/common_back_office/base_back_office_new.html:27
+#: back_office/templates/common_back_office/left_side_content.html:41
+msgid "Hola:"
+msgstr ""
+
+#: back_office/templates/common_back_office/base_back_office_new.html:35
+msgid "Mi cuenta"
+msgstr ""
+
+#: back_office/templates/common_back_office/base_back_office_new.html:42
+msgid "Carrito"
+msgstr ""
+
+#: back_office/templates/common_back_office/base_back_office_new.html:52
+#: back_office/templates/common_back_office/left_side_content.html:137
+msgid "Auto-Pujas"
+msgstr ""
+
+#: back_office/templates/common_back_office/base_back_office_new.html:59
+#: back_office/templates/common_back_office/left_side_content.html:142
+msgid "Mensajes"
+msgstr ""
+
+#: back_office/templates/common_back_office/base_back_office_new.html:85
+#: back_office/templates/common_back_office/left_side_content.html:156
+#: templates/common/header_login.html:22
+msgid "Salir"
+msgstr "Saleor"
+
+#: back_office/templates/common_back_office/base_back_office_new.html:104
+#: back_office/templates/common_back_office/left_side_content.html:124
+msgid "Mi Dashboard"
+msgstr ""
+
+#: back_office/templates/common_back_office/base_back_office_new.html:110
+msgid "Subastas activas"
+msgstr ""
+
+#: back_office/templates/common_back_office/base_back_office_new.html:117
+msgid "Paquetes de bids"
+msgstr ""
+
+#: back_office/templates/common_back_office/base_back_office_new.html:123
+msgid "Ver tu red"
+msgstr ""
+
+#: back_office/templates/common_back_office/base_back_office_new.html:130
+msgid "Publicidad"
+msgstr ""
+
+#: back_office/templates/common_back_office/base_back_office_new.html:136
+msgid "Cuenta bancaria"
+msgstr ""
+
+#: back_office/templates/common_back_office/base_back_office_new.html:142
+msgid "Ver retos"
+msgstr ""
+
+#: back_office/templates/common_back_office/base_back_office_new.html:177
+msgid "Copyright 2016. Todos los derechos reservados."
+msgstr ""
+
+#: back_office/templates/common_back_office/left_side_content.html:42
+msgid "Ud tiene "
+msgstr ""
+
+#: back_office/templates/common_back_office/left_side_content.html:42
+msgid "mensajes sin leer"
+msgstr ""
+
+#: back_office/templates/common_back_office/left_side_content.html:43
+msgid "Su URL en williambid:"
+msgstr ""
+
+#: back_office/templates/common_back_office/left_side_content.html:53
+msgid "Balance general"
+msgstr ""
+
+#: back_office/templates/common_back_office/left_side_content.html:56
+msgid "Ver su banco William"
+msgstr ""
+
+#: back_office/templates/common_back_office/left_side_content.html:62
+msgid "Membresia"
+msgstr ""
+
+#: back_office/templates/common_back_office/left_side_content.html:66
+msgid "Mejorar membres&iacute;a"
+msgstr ""
+
+#: back_office/templates/common_back_office/left_side_content.html:67
+msgid "Up"
+msgstr ""
+
+#: back_office/templates/common_back_office/left_side_content.html:73
+msgid "Valida durante:"
+msgstr ""
+
+#: back_office/templates/common_back_office/left_side_content.html:84
+msgid "Tipo Usuario"
+msgstr ""
+
+#: back_office/templates/common_back_office/left_side_content.html:98
+msgid "Red"
+msgstr ""
+
+#: back_office/templates/common_back_office/left_side_content.html:104
+#: templates/common/seccion_derecha.html:57
+msgid "Pujas"
+msgstr ""
+
+#: back_office/templates/common_back_office/left_side_content.html:110
+msgid "Puntos"
+msgstr ""
+
+#: back_office/templates/common_back_office/left_side_content.html:129
+msgid "Mi cesto"
+msgstr ""
+
+#: back_office/templates/common_back_office/left_side_content.html:150
+msgid "Configuraci&oacute;n"
+msgstr ""
+
+#: back_office/templates/index_back_office.html:90
+msgid "Balance general dividido por plan"
+msgstr ""
+
+#: back_office/templates/register.html:29
+msgid "Regresar al sitio web"
+msgstr ""
+
+#: back_office/templates/register.html:35
+msgid "Contactar con el administrador"
+msgstr ""
+
+#: back_office/templates/register.html:106
+msgid "Direccion de correo"
+msgstr ""
+
+#: back_office/templates/register.html:115
+msgid "Contrase&ntilde;a"
+msgstr ""
+
+#: back_office/templates/register.html:119
+msgid "Confirme contrase&ntilde;a"
+msgstr ""
+
+#: back_office/templates/register.html:129
+msgid "Direcci&oacute;n"
+msgstr ""
+
+#: back_office/templates/register.html:152
+msgid "Pa&iacute;s"
+msgstr ""
+
+#: back_office/templates/register.html:159
+msgid "Tel&eacute;fono"
+msgstr ""
+
+#: back_office/templates/register.html:166
+msgid "Seud&oacute;nimo"
+msgstr ""
+
+#: back_office/templates/register.html:192
+msgid "Aceptar"
+msgstr ""
+
+#: templates/about.html:6
+msgid "Acerca de nosotros"
+msgstr ""
+
+#: templates/about.html:18
+msgid ""
+"\n"
+"\n"
+"        <p>Williambid.com, pertenece al sector de pujas y negocios online y "
+"se desarrolla a nivel internacional. Esto\n"
+"            permitirá al usuario desarrollar su propio negocio en cualquier "
+"parte del mundo.\n"
+"        </p>\n"
+"\n"
+"\n"
+"        <p>La empresa, fundada por importantes empresarios internacionales, "
+"pretende fortalecer todos los vínculos\n"
+"            existentes entre los miembros de nuestra comunidad, las empresas "
+"y los usuarios convencionales para que\n"
+"            pueda\n"
+"            existir un importante vínculo retroactivo entre todos.</p>\n"
+"\n"
+"        <p>WILLIAMBID trabaja bajo un sistema de recompensas multinivel, "
+"donde se premia tanto el trabajo individual\n"
+"            como\n"
+"            el grupal y donde todos los usuarios pueden obtener grandes "
+"beneficios, tanto por su trabajo como por el de\n"
+"            su\n"
+"            grupo. Presenta un sistema retributivo flexible y transparente, "
+"lo que supondrá al usuario una mayor\n"
+"            estabilidad\n"
+"            y confianza para saber que su negocio sigue creciendo de una "
+"forma estable y sin ningún tipo de riesgo.</p>\n"
+"\n"
+"        <p>Según expertos analistas en pocos años se convertirá en una de "
+"las empresas de mayor crecimiento a nivel\n"
+"            mundial, gracias a su novedosa visión de la industria "
+"multinivel. ¿Ha imaginado alguna vez una oportunidad\n"
+"            de\n"
+"            negocio que le permita especializarse en el área o áreas de "
+"trabajo que usted mismo decida? Pues bien, con\n"
+"            WILLIAMBID podrá conseguirlo y obtener grandes beneficios "
+"trabajando en algo que realmente le guste. Además\n"
+"            le\n"
+"            dará la oportunidad de tener un sueldo de acuerdo a sus "
+"expectativas y esfuerzo.</p>\n"
+"\n"
+"        <p>De este modo, gracias a la oportunidad de negocio que se ofrece "
+"desde WILLIAMBID y el potencial de\n"
+"            crecimiento\n"
+"            que se augura por parte de la compañía, hace que esté enfrente "
+"de usted una de las oportunidades más\n"
+"            brillantes\n"
+"            de la historia. ¿Acepta este reto?</p>\n"
+"\n"
+"        <p>En WILLIAMBID podrá trabajar por su cuenta, pero nunca estará "
+"sólo, ya que tras usted habrá una importante\n"
+"            red\n"
+"            de trabajo.</p>\n"
+"\n"
+"        <h3>WILLIAMBID es sinónimo de ÉXITO.</h3>\n"
+"\n"
+"    "
+msgstr ""
+
+#: templates/business_opportunity.html:55
+msgid "C&oacute;mo funciona"
+msgstr ""
+
+#: templates/common/footer.html:17 templates/common/top_container.html:26
+msgid "Inicio"
+msgstr "Iniciação"
+
+#: templates/common/footer.html:20
+msgid "Sobre nosotros"
+msgstr "Sobre nós"
+
+#: templates/common/footer.html:23 templates/common/top_container.html:35
+msgid "Oportunidad de negocio"
+msgstr ""
+
+#: templates/common/footer.html:26
+msgid "Planes de compenasación"
+msgstr ""
+
+#: templates/common/footer.html:33
+msgid "Redes Sociales"
+msgstr ""
+
+#: templates/common/footer.html:39
+msgid ""
+"\n"
+"                    Pago &amp; Envio\n"
+"                "
+msgstr ""
+
+#: templates/common/footer.html:72
+msgid "Todos los derechos reservados"
+msgstr ""
+
+#: templates/common/header_login.html:20
+msgid "Bienvenido"
+msgstr ""
+
+#: templates/common/header_login.html:21
+msgid "Mi Cuenta"
+msgstr ""
+
+#: templates/common/header_login.html:31
+msgid "Entrar"
+msgstr ""
+
+#: templates/common/header_login.html:34
+msgid "Registrarse"
+msgstr ""
+
+#: templates/common/header_login.html:42
+msgid "¿Olvido contraseña?"
+msgstr ""
+
+#: templates/common/header_login.html:44
+msgid "Credenciales incorrectas. Intente de nuevo."
+msgstr ""
+
+#: templates/common/main_content.html:13
+msgid "SUBASTAS ACTIVAS"
+msgstr ""
+
+#: templates/common/seccion_derecha.html:59
+msgid "Ahorro"
+msgstr ""
+
+#: templates/common/seccion_derecha.html:73
+msgid "Comprar paquete"
+msgstr ""
+
+#: templates/common/seccion_derecha.html:89
+msgid "Próximas Subastas"
+msgstr ""
+
+#: templates/common/seccion_derecha.html:111
+msgid "Últimos Ganadores"
+msgstr ""
+
+#: templates/common/seccion_derecha.html:133
+msgid "Usuarios en línea"
+msgstr ""
+
+#: templates/common/top_container.html:29
+msgid "Acerca de..."
+msgstr "Sobre nós..."
+
+#: templates/common/top_container.html:32
+msgid "Club de socios"
+msgstr ""
+
+#: templates/common/top_container.html:38
+msgid "Comprar pujas"
+msgstr ""
+
+#: templates/pagina_inicio/box_product.html:4
+msgid "Mensaje de error"
+msgstr ""
+
+#: templates/pagina_inicio/box_product.html:7
+msgid "No tienes suficientes bids"
+msgstr ""
+
+#: templates/pagina_inicio/box_product.html:40
+msgid "Terminada"
+msgstr ""
+
+#: templates/pagina_inicio/box_product.html:105
+msgid "Vendida"
+msgstr ""
+
+#: templates/pagina_inicio/box_product.html:107
+msgid "Pujar"
+msgstr ""
+
+#: templates/pagina_inicio/box_product.html:120
+msgid ""
+"\n"
+"            Lo sentimos!!!!, No existen pujas disponibles en este instante\n"
+"        "
+msgstr ""
+
+#: templates/pagina_inicio/tabs.html:5
+msgid "Ultimos ganadores"
+msgstr ""
+
+#: templates/pagina_inicio/tabs.html:6
+msgid "Próximas subastas"
+msgstr ""
+
+#: templates/pagina_inicio/tabs.html:16 templates/pagina_inicio/tabs.html:61
+msgid "Productos"
+msgstr ""
+
+#: templates/pagina_inicio/tabs.html:17 templates/pagina_inicio/tabs.html:62
+msgid "Precio/Postor"
+msgstr ""
+
+#: templates/pagina_inicio/tabs.html:18 templates/pagina_inicio/tabs.html:63
+msgid "Cuenta Atras"
+msgstr ""
+
+#: templates/pagina_inicio/tabs.html:45
+msgid "VENDIDO"
+msgstr ""
+
+#: templates/pagina_inicio/tabs.html:85
+msgid "En espera"
+msgstr ""
+
+#: templates/pagina_inicio/tabs.html:87
+msgid "PROXIMAMENTE"
+msgstr ""
+
+#: templates/terms.html:6
+msgid "T&eacute;rminos y condiciones"
+msgstr ""
+
+#: templates/terms.html:18
+msgid ""
+"\n"
+"\n"
+"        <h3>1. DEFINITIONS</h3>\n"
+"        <p>By placing bids at Williambid, you (\"participant\", \"customer"
+"\", \"user\", \"bidder\", \"visitor\", \"auction winner\")\n"
+"            agree to enter an agreement with Williambid and accept the "
+"following terms and conditions, which are subject\n"
+"            to\n"
+"            revision by Williambid.</p>\n"
+"\n"
+"        <h3>2. ELIGIBILITY</h3>\n"
+"        <p>By accessing this site the Member exercises the right to act "
+"autonomously, and guarantees the right,\n"
+"            authority\n"
+"            and capacity to accept the present Agreement, agrees with all "
+"the Terms and Conditions and guarantees that\n"
+"            he/she is aged 18 or over, or as legally required in the country "
+"of residence.\n"
+"            Each single Member, by registering with Williambid, "
+"unconditionally accepts without any exception the\n"
+"            following\n"
+"            prohibited uses:\n"
+"        <ul>\n"
+"            <li>Open and use more than one Williambid account (“Account”) ; "
+"Use a false or misleading address or e-mail\n"
+"                address to open or use an Account.\n"
+"            </li>\n"
+"            <li>Supply false or misleading information to any subject "
+"involved in the Williambid program.</li>\n"
+"            <li>Use names and/or addresses and/or personal data of any type "
+"belonging to third parties.\n"
+"                Williambid reserves the right to suspend and/or delete the "
+"Member account if the Member doesn not follow\n"
+"                the\n"
+"                rules above\n"
+"            </li>\n"
+"        </ul>\n"
+"        </p>\n"
+"\n"
+"\n"
+"        <h3>3. ACCESS CODES</h3>\n"
+"        <p> Each Member must create a \"Nickname\" which will identify the "
+"Member on the Site in a unique and univocal\n"
+"            way. In\n"
+"            addition each Member must choose a \"Password\". Nickname and "
+"password allow Williambid Members to see, use\n"
+"            and manage\n"
+"            their Account.\n"
+"            You are solely responsible for keeping your Nickname and "
+"Password confidential. In no case shall Williambid\n"
+"            or their\n"
+"            employees or associates be liable and/or have duties in relation "
+"to the use or improper use of your Nickname\n"
+"            and/or\n"
+"            Password.</p>\n"
+"\n"
+"        <h3>4. SERVICE</h3>\n"
+"        <p>Our service is limited to the choice of suppliers and products "
+"placed on sale. Our Service includes\n"
+"            monitoring the regular execution of sales based on a blind "
+"lowest unique bid auction system, as per the\n"
+"            Rules described\n"
+"            herein, and\n"
+"            monitoring that the product purchased is delivered to the buyer. "
+"In addition, the Williambid Service\n"
+"            includes the\n"
+"            management and updating of the Site and of its web and software "
+"parts, as well as the management of all the\n"
+"            costs\n"
+"            related to servers, employees, advertising and costs related to "
+"the management of a Company. You hereby\n"
+"            agree and\n"
+"            accept that the Service offered and for which you decide to buy "
+"Credits is reasonable. Members who wish to\n"
+"            place\n"
+"            bids accept and agree to buy Credits in order to receive these "
+"Services. IF, FOR WHATEVER REASON, YOU DO NOT\n"
+"            AGREE\n"
+"            WITH THE SERVICE WE OFFER PLEASE DO NOT REGISTER WITH THE SITE "
+"AND DO NOT USE THE SERVICES.</p>\n"
+"\n"
+"        <h3>5. CREDITS</h3>\n"
+"        <p>Access to the Site and registration are free. To receive the "
+"Services offered by Williambid you must buy\n"
+"            Credits. In\n"
+"            return for purchasing the Williambid Services you receive "
+"Credits, which you can use at your discretion to\n"
+"            receive\n"
+"            the Information Service for each bid you place. The amount of "
+"Credits deducted from your Credits Account\n"
+"            purchased\n"
+"            is shown on the site and may vary according to the product. By "
+"registering as Member and therefore wanting\n"
+"            to\n"
+"            receive the Williambid services, you agree and accept that any "
+"payment you make to Williambid is made\n"
+"            exclusively to\n"
+"            guarantee the continuity of the Service indicated here and that "
+"the Information Service offered by\n"
+"            Williambid for\n"
+"            each bid is an additional Service offered by Williambid for "
+"which no payment, but only the use of Credits,\n"
+"            is\n"
+"            required. The Member is solely responsible for any type of "
+"management of his/her Account.</p>\n"
+"\n"
+"        <h3>6. BONUS OFFERS</h3>\n"
+"        <p> When purchasing Credits, or in the case of promotions which may "
+"be presented from time to time, Williambid\n"
+"            may, at\n"
+"            its own discretion and without any obligation, give you a "
+"Bonus.\n"
+"            A bonus amount can only be used to participate in the current "
+"auctions at Williambid, and can in no other\n"
+"            way be\n"
+"            used or reclaimed in the form of payment or compensation "
+"otherwise. All bonus offers are subject to the\n"
+"            terms and\n"
+"            conditions specified at the time of the offer. Williambid "
+"reserves the right to take appropriate action,\n"
+"            which may\n"
+"            include immediate account deactivation without refund, towards "
+"any users abusing bonus offers.</p>\n"
+"\n"
+"        <h3>7. ACCOUNT BALANCE WITHDRAWALS</h3>\n"
+"        <p>If a member wishes to have a certain balance, which has "
+"previously been deposited at Williambid, repaid in\n"
+"            the form\n"
+"            of balance on a bidding account, the member will be charged an "
+"administrative fee of $15. This fee covers\n"
+"            handling,\n"
+"            administrative and international transaction fees between "
+"Williambid and the member. The member also waives\n"
+"            any\n"
+"            claim to potential bonus amounts in the account that are linked "
+"to the amount being paid back, and these\n"
+"            bonuses\n"
+"            will be deducted from the account prior to the calculation of "
+"the administrative fee.</p>\n"
+"\n"
+"        <h3>8. SERVICE CHANGES</h3>\n"
+"        <p>Williambid reserves the right, at any time, to change or "
+"interrupt, temporarily or permanently, a part of the\n"
+"            Service with or without notice. You agree and accept that We "
+"shall not be liable and shall not be subject to\n"
+"            sanctions by you or third parties for any change, suspension or "
+"interruption of the Service and you agree\n"
+"            and accept\n"
+"            that you shall not have the right to receive any refund unless "
+"the Service is permanently closed and\n"
+"            interrupted for\n"
+"            a continuous period of 12 consecutive months.</p>\n"
+"\n"
+"        <h3>9. HOW THE AUCTIONS WORK</h3>\n"
+"        <p>With each bid placed the price of the item on which the user is "
+"bidding increases by the amount specified\n"
+"            (usually\n"
+"            between $0.01 and $0.10). A bid submitted by the user "
+"constitutes willingness of a user to enter into a\n"
+"            binding\n"
+"            contract with Williambid and in the event of a successful "
+"finishing of an auction, the claim to receive a\n"
+"            purchase\n"
+"            offer for the item of the auction under the conditions set out "
+"in the related auction. A contract to\n"
+"            purchase the\n"
+"            item does not come into effect until the auction is finished and "
+"the last bidder has followed all the steps\n"
+"            as set\n"
+"            forth in clause number 10.</p>\n"
+"\n"
+"        <p>Each new bid resets the ‘remaining time’ for an auction up to, "
+"but not above, the displayed countdown reset\n"
+"            value\n"
+"            (usually, 10, 15 or 20 seconds). The one exception to this rule "
+"is when two BidButlers bid against one\n"
+"            another. For\n"
+"            more information, please consult the ‘Help’ section. The auction "
+"ends when the remaining time reaches zero.\n"
+"            The user\n"
+"            who was the last to bid then wins the auction. All other bids "
+"placed on the item expire and will not be\n"
+"            credited\n"
+"            back to the user's account or be eligible for a refund.</p>\n"
+"\n"
+"        <p>Bids become valid when they are entered in the database and "
+"registered in Williambid’ system. Williambid are\n"
+"            not\n"
+"            responsible for disruptions in the user’s connection and errors "
+"that may occur as a result of this. This\n"
+"            includes,\n"
+"            but is not limited to, incorrect count-down of the remaining "
+"time, outdated information on bidders, and\n"
+"            bids.\n"
+"            Williambid reserve the right to pause all auctions, change the "
+"bidding time of on- going auctions and open\n"
+"            closed\n"
+"            auctions on suspicion of disruptions in operations.</p>\n"
+"\n"
+"        <p>The value of the products is based on an average price offered by "
+"local suppliers. Williambid cannot\n"
+"            guarantee that\n"
+"            a corresponding product is available elsewhere at a lower or "
+"higher price.</p>\n"
+"\n"
+"        <h3>10. AUCTION WINNER</h3>\n"
+"        <h4>10.1 Auction Winner Notification</h4>\n"
+"        <p>After an auction has ended, the last bidder (“winner”) must go to "
+"“My Account”. Here, information such as\n"
+"            total\n"
+"            price (including shipping costs) and payment options will be "
+"displayed. The user must pay the total price\n"
+"            (end price\n"
+"            plus shipping costs) for the win by following the steps "
+"indicated on that page or elsewhere on the website.\n"
+"            If an\n"
+"            auction win has not been confirmed and paid within 15 days of "
+"the auction end date, Williambid reserves the\n"
+"            right to\n"
+"            withdraw the offer to conclude a contract and the winner’s right "
+"to pay for and receive delivery of an item\n"
+"            will be\n"
+"            permanently revoked. All bids placed in that auction expire and "
+"are non-refundable. The user must pay the\n"
+"            total\n"
+"            price when confirming the win. After confirming the win and "
+"paying the amount due, the winner will receive a\n"
+"            confirmation e-mail. The item will not be sent to the user until "
+"the total price has been paid to\n"
+"            Williambid. A\n"
+"            similar requirement for delivery is that all bids purchased and "
+"used by the user have been properly paid\n"
+"            for. An\n"
+"            invoice containing the auction price and shipping costs will be "
+"sent to the user by Williambid once delivery\n"
+"            has\n"
+"            been arranged.</p>\n"
+"\n"
+"        <h4>10.2 Delivery</h4>\n"
+"        <p>Delivery. Items are normally delivered 2 to 5 days after the "
+"invoice has been paid. In rare cases there may\n"
+"            be\n"
+"            delays from the product manufacturer that prevents Williambid "
+"from delivering the item to the winner within\n"
+"            4 weeks,\n"
+"            and in these cases Williambid pledges to notify the customer of "
+"the delay and explain the circumstances. All\n"
+"            items\n"
+"            are delivered by courier, to the address specified in the "
+"winner’s Williambid account.</p>\n"
+"\n"
+"        <p>Some products may require your personal presence because they "
+"must be registered through public deed (e.g. a\n"
+"            car).\n"
+"            In this case all expenses sustained by the winner to reach the "
+"location of the product and/or any\n"
+"            registration cost\n"
+"            and/or any other cost not expressly mentioned on the site shall "
+"be paid by the Successful Bidder. After\n"
+"            having\n"
+"            purchased and paid for the Product the Winner can assign the "
+"property to a third party according to\n"
+"            instructions\n"
+"            which the Winner shall communicate to Williambid. Williambid "
+"shall not be liable or punishable in any way if\n"
+"            the\n"
+"            product cannot be delivered due to the fact that the address on "
+"the registration form is incomplete or\n"
+"            incorrect.\n"
+"            You are responsible for updating your details.</p>\n"
+"        <p>Customs duty and taxes do not applied to the products shipped "
+"within the European Community (EU). If any\n"
+"            customs\n"
+"            duty or taxes are applied, they are at consignee's expense (not "
+"included in the transport charges).</p>\n"
+"\n"
+"        <h4>10.3 Product Warranty</h4>\n"
+"        <p>Items sold on Williambid typically come with the manufacturer’s "
+"warranty, which obviously vary by\n"
+"            manufacturer.\n"
+"            Although Williambid is happy to assist the customer in "
+"correcting any issues with defectious products, the\n"
+"            company\n"
+"            does not offer any explicit product warranties.</p>\n"
+"        <p>In case there are any faults with the received item(s), please "
+"contact support@Williambid.com. The customer\n"
+"            will\n"
+"            then be given the option to return the goods for inspection. If "
+"the fault of the product is covered by the\n"
+"            manufacturer’s warranty, Williambid will assist the customer in "
+"acquiring a brand new product from the\n"
+"            manufacturer</p>\n"
+"\n"
+"        <h4>10.4 Availability</h4>\n"
+"        <p>Williambid will make its best efforts to select suppliers that "
+"can guarantee the availability of the product\n"
+"            with\n"
+"            the characteristics specified on the Site, without "
+"modifications, during the entire Bidding Period. If,\n"
+"            during the\n"
+"            Bidding period, Williambid is informed that said product with "
+"the characteristics presented is no longer\n"
+"            available,\n"
+"            Williambid shall indicate it on the Site or communicate it to "
+"the Winner, if the Bidding period is closed.\n"
+"            If the\n"
+"            product is not available after the Bidding Period, the Winner "
+"shall be offered a product of the same type of\n"
+"            equal\n"
+"            or higher value. In this case the Confirmation Period defined "
+"above becomes of thirty (30) days. If on the\n"
+"            other\n"
+"            hand the product is not available during the Bidding Period and "
+"Williambid is informed of this, then the\n"
+"            product may\n"
+"            be withdrawn from the auction and all the Credits used to place "
+"bids by Members for that product will be\n"
+"            credited to\n"
+"            their Accounts.</p>\n"
+"\n"
+"        <h4>10.5 Product Refunds</h4>\n"
+"        <p>An auction winner has the right to cancel the purchase within 14 "
+"days, provided that the product is unused\n"
+"            and\n"
+"            unopened.If the customer wishes to cancel the purchase of an "
+"auction item, the customer should contact\n"
+"            support@Williambid.com\n"
+"            and either send the item to us, or deliver them to a specific "
+"address. The customer will then be reimbursed\n"
+"            for any\n"
+"            amount paid for the item (the lowest unique bid), less shipping "
+"and handling.</p>\n"
+"\n"
+"        <h4>10.6 Contact Information</h4>\n"
+"        <p>When placing a bid, the customer agrees to provide a telephone "
+"number that Williambid can use to contact the\n"
+"            customer at the time of the auction close in the case that the "
+"customer has placed the lowest unique bid.\n"
+"            Aside from\n"
+"            a telephone number, the customer may also provide Williambid "
+"with other contact details including, but not\n"
+"            limited\n"
+"            to,address and gender when opening an account. As stated under "
+"“Privacy”, Williambid adheres to applicable\n"
+"            privacy\n"
+"            laws and has policies in place that this information will not be "
+"shared with third parties without the\n"
+"            member’s\n"
+"            expressed consent.</p>\n"
+"\n"
+"        <h4>10.7 Publication of auction winners</h4>\n"
+"        <p>Williambid has the right to contact the winner after the end of "
+"an auction and publish information about the\n"
+"            winner.\n"
+"            All winners of items worth $ 3 000 or more are obligated to "
+"submit a picture and full name to Williambid for\n"
+"            publication on Williambid. In order to provide its members and "
+"the public with transparency in regards to\n"
+"            auction\n"
+"            winners, Williambid has the right to forward auction winners’ "
+"contact information to relevant media,\n"
+"            individuals,\n"
+"            and Williambid’s certified accounting firm.</p>\n"
+"\n"
+"        <h4>10.8 Limits of gains</h4>\n"
+"        <p>Each User can win up to 8 auctions per month. If Williambid "
+"notices or has knowledge that one or more\n"
+"            accounts are\n"
+"            affiliated with only one User, the limit of 8 auctions per month "
+"will applied to all accounts. Accounts are\n"
+"            considered as affiliated if they belong to members of a same "
+"family, if they use a same IP address, if they\n"
+"            use a\n"
+"            same delivery address, or if Williambid has the knowledge that "
+"these Users share their information or\n"
+"            strategies of\n"
+"            bids.</p>\n"
+"\n"
+"        <h3>11. PRODUCT DESCRIPTION</h3>\n"
+"        <p>We do our best to give Product description which are as accurate "
+"as possible. The information may contain\n"
+"            printing\n"
+"            errors or incorrect elements. Therefore, product information "
+"must not be considered as a Williambid\n"
+"            declaration of\n"
+"            the technical characteristics of a product. The published market "
+"values are basic estimates made by\n"
+"            Williambid, and\n"
+"            may be different due to the nature of commerce and ever-changing "
+"prices.</p>\n"
+"\n"
+"        <h3> 12. DICLAIMER</h3>\n"
+"        <p>Williambid, including their legal representatives, directors, "
+"agents, controlled companies and employees\n"
+"            shall not\n"
+"            be liable for incorrect or incomplete contents published on the "
+"site or concerning the Service whether these\n"
+"            are\n"
+"            generated by users, Members or any other instrument or program "
+"associated to the Service or used by the\n"
+"            Service, or\n"
+"            generated by the conduct of any user and/or Member of the "
+"Service both online and offline. Williambid shall\n"
+"            not be\n"
+"            liable for any errors, interruptions, extensions, defects, "
+"delays in the operations or in the transmission,\n"
+"            lack of\n"
+"            communication lines, thefts, destruction or unauthorised access "
+"to or alteration of user and or Member\n"
+"            communications. Williambid shall not be liable for any technical "
+"malfunction or problem of any network or\n"
+"            telephone\n"
+"            line, online computer system, server or provider, computer "
+"equipment, software, lack of e-mail or traffic\n"
+"            congestion\n"
+"            of the Internet or any site or combination of these, including "
+"tort or damage to user and /or Member\n"
+"            computers\n"
+"            and/or computer of any person, that may arise from taking part "
+"or downloading material related to the\n"
+"            Williambid\n"
+"            Site and/or Service. Williambid shall not be liable, for "
+"whatever reason, for any loss or damage deriving\n"
+"            from the\n"
+"            use of the site or Service and/or any content published on the "
+"site or communicated to Williambid Members by\n"
+"            anyone.\n"
+"            Williambid and their employees cannot guarantee and do not "
+"promise that the use of the site and/or Service\n"
+"            will lead\n"
+"            to specific results.</p>\n"
+"\n"
+"        <h3>13. LIMITATION OF LIABILITY</h3>\n"
+"        <p>Excluding jurisdictions in which said provisions are limited (in "
+"that case We decline any responsibility to\n"
+"            the\n"
+"            extent permitted by law), Williambid shall not, for any reason, "
+"be liable towards members or third parties\n"
+"            for any\n"
+"            indirect, consequent, exemplary, accidental, special or punitive "
+"damage including the loss of profits that\n"
+"            may arise\n"
+"            from the use of the site or Service even if Williambid has been "
+"advised of the possibility of said damage.\n"
+"            Notwithstanding anything to the contrary contained in this "
+"agreement Williambid’s liability to the member\n"
+"            for any\n"
+"            cause whatsoever, regardless of the form of action, will at all "
+"times be limited to the amount paid by the\n"
+"            Member,\n"
+"            expressed in Credits, and not yet used net of any Bonus Credits "
+"received.</p>\n"
+"\n"
+"        <h3>14. TRADEMARK PROPERTY</h3>\n"
+"        <p>Williambid trademarks and the Williambid logo, and Williambid "
+"website texts belong to us. All other\n"
+"            trademarks\n"
+"            belong to their respective owners. You cannot, for any reason, "
+"use the intellectual property of Williambid\n"
+"            and/or\n"
+"            reproduce texts, images or any other data published on the "
+"Williambid website.</p>\n"
+"\n"
+"    "
+msgstr ""
+
+#: william/settings.py:122
+msgid "English"
+msgstr ""
+
+#: william/settings.py:123
+msgid "Spanish"
+msgstr ""

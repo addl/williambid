@@ -1,0 +1,54 @@
+{% extends 'index_back_office.html' %}
+
+{% load staticfiles i18n %}
+
+{% block main_content %}
+
+    <style>
+        form {
+            float: right;
+            margin: 1em 0.5em 0 0;
+        }
+    </style>
+
+    <script>
+        /* aqui el codigo javascript para el pago por tarjeta */
+        /**************************PAGO************************/
+    </script>
+    <div class="widget">
+        <div class="title">
+            <img src="{% static "back_office/images/icons/dark/cart2.png" %}" alt="" class="titleIcon">
+            <h6>{% trans "Est&aacute;s a punto de comprar los siguientes productos" %}</h6>
+        </div>
+
+        {% for subasta_vendida in user.shoppinggcart.subastavendida_set.all %}
+            <div class="wUserInfo">
+                <a href="#" title="" class="wUserPic">
+                    {% if subasta_vendida.subasta.contenido.articulo %}
+                        <img style="max-width: 50px;" src="/{{ subasta_vendida.subasta.contenido.articulo.imagen }}"
+                             alt="">
+                    {% else %}
+                        <img style="max-width: 50px;" src="{% static "back_office/images/icons/dMoney.png" %}" alt="">
+                    {% endif %}
+                </a>
+                <ul class="leftList">
+                    <li><a href="#" title=""><strong>{{ subasta_vendida.subasta.contenido.nombre }}</strong></a></li>
+                    <li><a href="#" title="">eugene@kopyov.com</a></li>
+                </ul>
+                <ul class="rightList">
+                    <li><a href="#" class="green"><strong>{{ subasta_vendida.subasta.precio_actual }}</strong></a></li>
+                    <li><a href="#" class="red">12 purchases</a></li>
+                </ul>
+            </div>
+
+            {% if not forloop.last %}
+                <div class="cLine"></div>
+            {% endif %}
+        {% endfor %}
+
+    </div>
+    {{ form.render }}
+
+
+
+{% endblock %}

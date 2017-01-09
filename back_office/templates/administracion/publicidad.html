@@ -1,0 +1,57 @@
+{% extends 'index_back_office.html' %}
+
+
+{% load staticfiles i18n %}
+
+{% block main_content %}
+    <script type="text/javascript">
+        $(function () {
+            //$('div.tabs input[radio]').removeAttr('checked')
+            //$('#publicidad').attr('checked', 'checked');
+        });
+    </script>
+
+    <div class="widget">
+        <div class="title"><img src="{% static "back_office/images/icons/dark/archive.png" %}" alt="" class="titleIcon">
+            <h6>Herramientas de publicidad</h6>
+
+            <div class="num"><a href="#" class="blueNum">+245</a></div>
+        </div>
+        <table cellpadding="0" cellspacing="0" width="100%" class="sTable taskWidget">
+            <thead>
+            <tr>
+                <td>{% trans "Nombre" %}</td>
+                <td width="100">{% trans "Descripci&oacute;n" %}</td>
+                <td width="60">{% trans "Opciones" %}</td>
+            </tr>
+            </thead>
+            <tbody>
+            {% for tool in herramientas %}
+                <tr>
+                    <td class="taskPr">
+                        <a href="#" title="">{{ tool.title }}</a>
+                    </td>
+                    <td>
+                        <span class="green f11">{{ tool.description }}</span>
+                    </td>
+                    <td class="actBtns">
+                        <!--
+                        <a href="#" class="tipS" original-title="Update">
+                            <img src="images/icons/edit.png"
+                                 alt="">
+                        </a>
+                        -->
+                        <a href="{% static tool.tool_file %}" class="tipS" original-title="{% trans "Descargar" %}">
+                            <img src="{% static "back_office/images/icons/downloadTop.png" %}" alt="">
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+{% endblock %}

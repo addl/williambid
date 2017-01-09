@@ -1,0 +1,74 @@
+{% extends 'common/main_content.html' %}
+{% load i18n staticfiles %}
+
+{% block extraheader %}
+    <style>
+        .toggle {
+            margin-top: 3em;
+            background: #f9f9f9;
+            padding: 0.7em 0 0 0;
+        }
+
+        .toggle .title {
+            height: 36px;
+            border-bottom: 1px solid #cdcdcd;
+            cursor: pointer;
+            background: #fafafa;
+        }
+
+        .toggle .title h6 {
+            font-size: 12px;
+            margin: 0;
+            padding: 12px 2px 2px 3pc;
+        }
+
+        .toggle .titleIcon {
+            float: left;
+            padding: 11px 11px;
+            border-right: 1px solid #D5D5D5;
+        }
+
+        .toggle .body, .toggle .menu_body {
+            padding: 12px 14px;
+            border-bottom: 1px solid #cdcdcd;
+        }
+
+        .toggle .inactive {
+            color: #2B6893;
+        }
+    </style>
+
+    <script src="{% static "js/plugins/ui/jquery.collapsible.min.js" %}"></script>
+
+    <script>
+        $(function () {
+            $(".acc .title").click(function () {
+                $(this).css({color: "#2B6893"}).next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+                $(this).siblings().css({color: "#404040"});
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block encabezado_seccion_principal %}
+    <div class="box-heading">
+        <h2>{% trans "C&oacute;mo funciona" %}</h2>
+    </div>
+{% endblock %}
+
+{% block bloque_principal %}
+
+    <div class="toggle acc">
+        {% for plan in plans %}
+            <div class="title" style="color: rgb(43, 104, 147);">
+                <img src="{% static "back_office/images/icons/dark/check.png" %}" alt="" class="titleIcon">
+                <h6>Plan No. {{ plan.num_plan }}</h6>
+            </div>
+            <div class="menu_body" style="display: none; color: rgb(64, 64, 64);">
+                {{ plan.descripcion }}
+            </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}

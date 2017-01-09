@@ -1,0 +1,38 @@
+{% extends 'admin/change_form.html' %}
+{% load staticfiles %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <script src="{% static 'js/jquery/jquery-2.0.0.js' %}"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#id_requisito").change(function (e) {
+                if ($(this).is(":checked")) {
+                    enable_field("id_tipo_usuario");
+                    enable_field("id_cantidad_de_dinero");
+                    enable_field("id_cantidad_de_puntos");
+                    enable_field("id_membresia_minima");
+                    enable_field("id_cantidad_de_usuarios_en_red");
+                } else {
+                    disable_field("id_tipo_usuario");
+                    disable_field("id_cantidad_de_dinero");
+                    disable_field("id_cantidad_de_puntos");
+                    disable_field("id_membresia_minima");
+                    disable_field("id_cantidad_de_usuarios_en_red");
+                }
+            });
+        });
+
+
+        disable_field = function (field_id) {
+            $("#" + field_id).attr('disabled', 'disabled');
+        }
+        enable_field = function (field_id) {
+            $("#" + field_id).removeAttr('disabled');
+        }
+
+    </script>
+
+
+
+{% endblock %}

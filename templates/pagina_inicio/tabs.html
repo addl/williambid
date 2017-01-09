@@ -1,0 +1,96 @@
+{% load staticfiles i18n%}
+
+<div id="tabs">
+    <ul style="">
+        <li><a href="#tabs-1" style="font-size: 17px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif">{% trans "Ultimos ganadores" %}</a></li>
+        <li><a href="#tabs-2" style="font-size: 17px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif">{% trans "Próximas subastas" %}</a></li>
+    </ul>
+    <div id="tabs-1">
+        <div id="state-bids" class="backgraund-radius-gray">
+
+            <div id="top-title"></div>
+
+            <div class="clr"></div>
+
+            <div class="theader">
+                <div class="td producto">{% trans "Productos" %}</div>
+                <div class="td precioPostor">{% trans "Precio/Postor" %}</div>
+                <div class="td countBack">{% trans "Cuenta Atras" %}</div>
+            </div>
+
+            <div class="clr"></div>
+
+            {% for subasta in ultimas_subastas %}
+                <div class="tr">
+                    <div class="td picture">
+                        {% if subasta.contenido.articulo %}
+                            <img src="/{{ subasta.contenido.articulo.imagen }}" width="112" height="80"></div>
+                        {% else %}
+                            <img src="{% static "back_office/images/icons/dMoney.png" %}" width="90" height="60"></div>
+                        {% endif %}
+                    <div class="td type">
+                        <div class="title-product">
+                            <a class="fancybox" href="#">{{ subasta.contenido.nombre }}</a>
+                        </div>
+                        <div class="description-product">{{ subasta.contenido.descripcion }}</div>
+                    </div>
+                    <div class="td price">
+                        <div class="price-higthligth-bid">{{ subasta.precio_actual }} €</div>
+                        <div class="winer"> {{ subasta.ganador.perfilusuario.seudonimo }}</div>
+                    </div>
+                    <div class="td state">
+                        <div class="auctCountDown">
+                            <div class="countdown_down countdown">00d 00h 00m 00s</div>
+                        </div>
+                        <button class="ui-button ui-red-button btn-vendido"><span>{% trans "VENDIDO" %}</span></button>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+    <div id="tabs-2">
+        <div id="state-bids" class="backgraund-radius-gray">
+
+            <div id="top-title"></div>
+
+            <div class="clr"></div>
+
+            <div class="theader">
+                <div class="td producto">{% trans "Productos" %}</div>
+                <div class="td precioPostor">{% trans "Precio/Postor" %}</div>
+                <div class="td countBack">{% trans "Cuenta Atras" %}</div>
+            </div>
+
+            <div class="clr"></div>
+
+            {% for subasta in proximas_subastas %}
+                <div class="tr">
+                    <div class="td picture">
+                        <img src="/{{ subasta.contenido.articulo.imagen }}" width="112" height="80">
+                    </div>
+                    <div class="td type">
+                        <div class="title-product">
+                            <a class="fancybox" href="#">{{ subasta.contenido.nombre }}</a>
+                        </div>
+                        <div class="description-product">{{ subasta.contenido.descripcion }}</div>
+                    </div>
+                    <div class="td price">
+                        <div class="price-higthligth-bid">{{ subasta.precio_actual }} €</div>
+                        <div class="winer"> {{ subasta.ganador.perfilusuario.seudonimo }}</div>
+                    </div>
+                    <div class="td state">
+                        <div class="auctCountDown">
+                            <div class="countdown_down countdown">{% trans "En espera" %}</div>
+                        </div>
+                        <button class="ui-button ui-red-button btn-vendido"><span>{% trans "PROXIMAMENTE" %}</span></button>
+                    </div>
+                </div>
+            {% endfor %}
+
+            <div class="clr"></div>
+
+        </div>
+    </div>
+</div>

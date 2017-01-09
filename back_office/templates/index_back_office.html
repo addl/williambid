@@ -1,0 +1,98 @@
+{% extends 'common_back_office/base_back_office_new.html' %}
+{% load staticfiles i18n%}
+
+{% block information %}
+    <!-- Note -->
+{#    <div class="nNote nInformation hideit">#}
+{#        <p><strong>INFORMATION: </strong>Top buttons area has 3 versions - 2 kinds of buttons and statistics.#}
+{#            All of them could be viewed on <a href="ui_elements.html" title="">Interface elements page</a></p>#}
+{#    </div>#}
+{% endblock %}
+
+{% block main_content %}
+
+    <script type="text/javascript">
+
+        obtener_estado_de_cuentas = function () {
+            $.ajax({
+                type: 'GET',
+                url: "/usuarios/back-office/xhr/data/cuenta",
+                success: function (response) {
+                    //console.log(response.cuentas);
+                    lista_cuentas = JSON.parse(response.cuentas);
+                    /*accountArray = [
+                        ['Firefox', 45.0],
+                        ['IE', 26.8],
+                        {
+                            name: 'Chrome',
+                            y: 12.8,
+                            sliced: true,
+                            selected: true
+                        },
+                        ['Safari', 8.5],
+                        ['Opera', 6.2],
+                        ['Others', 0.7]
+                    ];*/
+                    accountArray = new Array();
+                    $.each(lista_cuentas, function(index, item){
+                        obj = {
+                            name: "Plan " + item.fields['tipo_plan'],
+                            y: item.fields['monto_total'],
+                        };
+                        accountArray.push(obj);
+                    });
+                    $('#container').highcharts({
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false
+                        },
+                        title: {
+                            text: 'Porcentaje de dinero recaudado por plan de compensación'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                            type: 'pie',
+                            name: 'Porcentaje',
+                            data: accountArray,
+                        }]
+                    });
+                },
+                error: function (response) {
+                    alertify.error("Error al recuperar datos de cuentas");
+                }
+            });
+        }
+        $(function () {
+            obtener_estado_de_cuentas();
+        });
+    </script>
+
+    <!-- Chart -->
+    <div class="widget chartWrapper">
+        <div class="title">
+            <img src="{% static "back_office/images/icons/dark/stats.png" %}" alt=""
+                                class="titleIcon"/><h6>{% trans "Balance general dividido por plan" %}</h6></div>
+        <div class="body">
+            <div class="chart">
+                <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

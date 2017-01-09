@@ -1,0 +1,29 @@
+{% extends "common/main_content.html" %}
+
+{% load staticfiles i18n %}
+
+{% block bloque_principal %}
+
+    <div class="widget">
+        <div class="wrapper">
+            <div class="controlB">
+                <ul>
+                    {% for package in paquetes_bids %}
+                        <li>
+                            <a href="#" title="">
+                                <img src="{% static "back_office/images/icons/dMoney.png" %}" alt="">
+                                <span>{{ package.nombre }}</span>
+                                <span>{% trans "Contiene:" %}{{ package.cantidad_de_bids }} bids</span>
+                            </a>
+                            <a href="/paquetes-bid/comprar/{{ package.id }}" title="" class="wButton orangewB m10">
+                                <span>{% trans "Comprar" %}</span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

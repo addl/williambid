@@ -1,0 +1,45 @@
+{% extends 'common/base.html' %}
+{% load i18n %}
+
+{% block contenido %}
+    <div class="section" id="page_content">
+        <div class="container">
+            <div class="box">
+
+                <div class="box-content">
+
+                    {% block encabezado_seccion_principal %}
+                        <div class="box-heading">
+                            <h2>{% trans "SUBASTAS ACTIVAS" %}</h2>
+                        </div>
+                    {% endblock %}
+
+                    <!-- seccion lateral derecha -->
+                    {% block bloque_lateral %}
+                        {% include 'common/seccion_derecha.html' %}
+                    {% endblock %}
+
+                    <article>
+                        {% block bloque_principal %}
+
+                        {% endblock %}
+                    </article>
+
+                </div>
+                <!-- << box content >> -->
+            </div>
+            <!-- << box >> -->
+
+            {% block banner_de_promocion %}
+
+            {% endblock %}
+
+            {% block tabs %}
+
+            {% endblock %}
+
+        </div>
+        <!-- << container >> -->
+    </div><!-- << page content >> -->
+{% endblock %}
+
