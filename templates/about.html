@@ -1,60 +1,243 @@
-{% extends 'common/main_content.html' %}
-{% load i18n %}
+{% extends 'common/base.html' %}
+{% load i18n staticfiles %}
 
-{% block encabezado_seccion_principal %}
-    <div class="box-heading">
-        <h2>{% trans "Acerca de nosotros" %}</h2>
-    </div>
+{% block header %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Williambid.com</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    {#    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">#}
+    {#    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">#}
+    <link rel="shortcut icon" href="{% static 'about/img/smile.ico' %}"/>
+    <link rel="stylesheet" href="{% static 'about/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'about/css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'about/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'about/css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'about/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'about/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'about/css/animate.css' %}">
+    <script src="{% static 'about/js/vendor/modernizr-2.6.2.min.js' %}"></script>
 {% endblock %}
 
-{% block bloque_principal %}
-
-    <style>
-        p {
-            text-align: justify;
-        }
-    </style>
-
-    {% blocktrans %}
-
-        <p>Williambid.com, pertenece al sector de pujas y negocios online y se desarrolla a nivel internacional. Esto
-            permitirá al usuario desarrollar su propio negocio en cualquier parte del mundo.
-        </p>
-
-
-        <p>La empresa, fundada por importantes empresarios internacionales, pretende fortalecer todos los vínculos
-            existentes entre los miembros de nuestra comunidad, las empresas y los usuarios convencionales para que
-            pueda
-            existir un importante vínculo retroactivo entre todos.</p>
-
-        <p>WILLIAMBID trabaja bajo un sistema de recompensas multinivel, donde se premia tanto el trabajo individual
-            como
-            el grupal y donde todos los usuarios pueden obtener grandes beneficios, tanto por su trabajo como por el de
-            su
-            grupo. Presenta un sistema retributivo flexible y transparente, lo que supondrá al usuario una mayor
-            estabilidad
-            y confianza para saber que su negocio sigue creciendo de una forma estable y sin ningún tipo de riesgo.</p>
-
-        <p>Según expertos analistas en pocos años se convertirá en una de las empresas de mayor crecimiento a nivel
-            mundial, gracias a su novedosa visión de la industria multinivel. ¿Ha imaginado alguna vez una oportunidad
-            de
-            negocio que le permita especializarse en el área o áreas de trabajo que usted mismo decida? Pues bien, con
-            WILLIAMBID podrá conseguirlo y obtener grandes beneficios trabajando en algo que realmente le guste. Además
-            le
-            dará la oportunidad de tener un sueldo de acuerdo a sus expectativas y esfuerzo.</p>
-
-        <p>De este modo, gracias a la oportunidad de negocio que se ofrece desde WILLIAMBID y el potencial de
-            crecimiento
-            que se augura por parte de la compañía, hace que esté enfrente de usted una de las oportunidades más
-            brillantes
-            de la historia. ¿Acepta este reto?</p>
-
-        <p>En WILLIAMBID podrá trabajar por su cuenta, pero nunca estará sólo, ya que tras usted habrá una importante
-            red
-            de trabajo.</p>
-
-        <h3>WILLIAMBID es sinónimo de ÉXITO.</h3>
-
-    {% endblocktrans %}
+{% block top_container %}
 
 {% endblock %}
+
+{% block contenido %}
+    <!-- Add your site or application content here -->
+    <section class="banner_area">
+        <div class="container banner">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="top_part">
+                        <a href="/">
+                            <img src="{% static 'about/img/logo.png' %}" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="top_part_right">
+                        <h1> DISCOUNT & OVERSTOCK</h1>
+                        <h2> AUCTIONS</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="left_part">
+                        <h2>2016 BLOWOUT AUCTIONS</h2>
+                        <h3>Hundreds of uctions Winners Daily</h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="right_part">
+                        <img src="{% static 'about/img/pc.png' %}" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>Brand New Factory Sealed Products With Manufacturer's Warranty</p>
+    </section>
+
+    <section class="promo_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single_promo">
+                        <img src="{% static 'about/img/promo.jpg' %}" alt=""/>
+                        <div class="promo_text">
+                            <h4>Overstock Surplus</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single_promo center">
+                        <img src="{% static 'about/img/tap.jpg' %}" alt=""/>
+                        <div class="promo_text">
+                            <h2>Fun Way To Shop</h2>
+                            <h4>Overstock Surplus</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single_promo">
+                        <img src="{% static 'about/img/promo.jpg' %}" alt=""/>
+                        <div class="promo_text">
+                            <h4>Overstock Closeouts</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br/>
+            <img src="{% static 'about/img/line.jpg' %}" style="width:100%" alt=""/>
+        </div>
+    </section>
+
+    <section class="satisfy">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>"1,000s of <span>Satisfied</span> Customers!"</h2>
+                    <h2><span>Free Sign Up In Less Than 1 Minute!</span></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wining">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="winning_add">
+                        <img src="{% static 'about/img/add.jpg' %}" alt=""/>
+                        <p>HAPPYBIDDAY.COM</p>
+                        <h3><span>BID</span> till you <span>WIN</span><br> with your <span>FIRST</span> Bid Pack</h3>
+                        <img src="{% static 'about/img/winning.jpg' %}" alt=""/>
+                        <span class="win_text">WINNING GUARANTEE</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="winning_add">
+                        <img src="{% static 'about/img/add.jpg' %}" alt=""/>
+                        <p>HAPPYBIDDAY.COM</p>
+                        <h3><span>BID</span> till you <span>WIN</span><br> with your <span>FIRST</span> Bid Pack</h3>
+                        <img src="{% static 'about/img/winning.jpg' %}" alt=""/>
+                        <span class="win_text">WINNING GUARANTEE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bidday">
+        <div class="container">
+            <h1>At HappyBidday You Get</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="register">
+                        <ul>
+                            <li>
+                                <p>Williambid.com, pertenece al sector de pujas y negocios online y se desarrolla a
+                                    nivel internacional. Esto
+                                    permitirá al usuario desarrollar su propio negocio en cualquier parte del mundo.
+                                </p>
+
+
+                                <p>La empresa, fundada por importantes empresarios internacionales, pretende fortalecer
+                                    todos los vínculos
+                                    existentes entre los miembros de nuestra comunidad, las empresas y los usuarios
+                                    convencionales para que
+                                    pueda
+                                    existir un importante vínculo retroactivo entre todos.</p>
+
+                                <p>WILLIAMBID trabaja bajo un sistema de recompensas multinivel, donde se premia tanto
+                                    el trabajo individual
+                                    como
+                                    el grupal y donde todos los usuarios pueden obtener grandes beneficios, tanto por su
+                                    trabajo como por el de
+                                    su
+                                    grupo. Presenta un sistema retributivo flexible y transparente, lo que supondrá al
+                                    usuario una mayor
+                                    estabilidad
+                                    y confianza para saber que su negocio sigue creciendo de una forma estable y sin
+                                    ningún tipo de riesgo.</p>
+
+                                <p>Según expertos analistas en pocos años se convertirá en una de las empresas de mayor
+                                    crecimiento a nivel
+                                    mundial, gracias a su novedosa visión de la industria multinivel. ¿Ha imaginado
+                                    alguna vez una oportunidad
+                                    de
+                                    negocio que le permita especializarse en el área o áreas de trabajo que usted mismo
+                                    decida? Pues bien, con
+                                    WILLIAMBID podrá conseguirlo y obtener grandes beneficios trabajando en algo que
+                                    realmente le guste. Además
+                                    le
+                                    dará la oportunidad de tener un sueldo de acuerdo a sus expectativas y esfuerzo.</p>
+
+                                <p>De este modo, gracias a la oportunidad de negocio que se ofrece desde WILLIAMBID y el
+                                    potencial de
+                                    crecimiento
+                                    que se augura por parte de la compañía, hace que esté enfrente de usted una de las
+                                    oportunidades más
+                                    brillantes
+                                    de la historia. ¿Acepta este reto?</p>
+
+                                <p>En WILLIAMBID podrá trabajar por su cuenta, pero nunca estará sólo, ya que tras usted
+                                    habrá una importante
+                                    red
+                                    de trabajo.</p>
+
+                                <h3>WILLIAMBID es sinónimo de ÉXITO.</h3>
+                            </li>
+                            {#                            <li>Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is#}
+                            {#                                simply dummy text of the printing and typesetting industry#}
+                            {#                            </li>#}
+                            {#                            <li>Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem</li>#}
+                            {#                            <li>Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem</li>#}
+                        </ul>
+                        <a href="/usuarios/registro/" class="regi_button">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <script src="{% static 'js/jquery/jquery-2.0.0.js' %}"></script>
+    <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script> -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function (b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                    function () {
+                        (b[l].q = b[l].q || []).push(arguments)
+                    });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = '//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
+    </script>
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

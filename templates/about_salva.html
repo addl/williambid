@@ -1,0 +1,60 @@
+{% extends 'common/base.html' %}
+{% load i18n %}
+
+{% block encabezado_seccion_principal %}
+    <div class="box-heading">
+        <h2>{% trans "Acerca de nosotros" %}</h2>
+    </div>
+{% endblock %}
+
+{% block bloque_principal %}
+
+    <style>
+        p {
+            text-align: justify;
+        }
+    </style>
+
+    {% blocktrans %}
+
+        <p>Williambid.com, pertenece al sector de pujas y negocios online y se desarrolla a nivel internacional. Esto
+            permitirá al usuario desarrollar su propio negocio en cualquier parte del mundo.
+        </p>
+
+
+        <p>La empresa, fundada por importantes empresarios internacionales, pretende fortalecer todos los vínculos
+            existentes entre los miembros de nuestra comunidad, las empresas y los usuarios convencionales para que
+            pueda
+            existir un importante vínculo retroactivo entre todos.</p>
+
+        <p>WILLIAMBID trabaja bajo un sistema de recompensas multinivel, donde se premia tanto el trabajo individual
+            como
+            el grupal y donde todos los usuarios pueden obtener grandes beneficios, tanto por su trabajo como por el de
+            su
+            grupo. Presenta un sistema retributivo flexible y transparente, lo que supondrá al usuario una mayor
+            estabilidad
+            y confianza para saber que su negocio sigue creciendo de una forma estable y sin ningún tipo de riesgo.</p>
+
+        <p>Según expertos analistas en pocos años se convertirá en una de las empresas de mayor crecimiento a nivel
+            mundial, gracias a su novedosa visión de la industria multinivel. ¿Ha imaginado alguna vez una oportunidad
+            de
+            negocio que le permita especializarse en el área o áreas de trabajo que usted mismo decida? Pues bien, con
+            WILLIAMBID podrá conseguirlo y obtener grandes beneficios trabajando en algo que realmente le guste. Además
+            le
+            dará la oportunidad de tener un sueldo de acuerdo a sus expectativas y esfuerzo.</p>
+
+        <p>De este modo, gracias a la oportunidad de negocio que se ofrece desde WILLIAMBID y el potencial de
+            crecimiento
+            que se augura por parte de la compañía, hace que esté enfrente de usted una de las oportunidades más
+            brillantes
+            de la historia. ¿Acepta este reto?</p>
+
+        <p>En WILLIAMBID podrá trabajar por su cuenta, pero nunca estará sólo, ya que tras usted habrá una importante
+            red
+            de trabajo.</p>
+
+        <h3>WILLIAMBID es sinónimo de ÉXITO.</h3>
+
+    {% endblocktrans %}
+
+{% endblock %}

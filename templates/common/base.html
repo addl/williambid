@@ -6,9 +6,11 @@
     <title>WilliamBid</title>
     <meta charset=’utf-8’>
 
-    {% include 'common/meta_header.html' %}
+    {% block header %}
+        {% include 'common/meta_header.html' %}
+    {% endblock %}
 
-    {%  block extraheader %}
+    {% block extraheader %}
 
     {% endblock %}
 
@@ -21,7 +23,9 @@ Menu flotante and social networking
 -->
 
 <!-- top container-->
-{% include 'common/top_container.html' %}
+{% block top_container %}
+    {% include 'common/top_container.html' %}
+{% endblock %}
 
 <!-- main content-->
 {% block contenido %}
@@ -29,4 +33,6 @@ Menu flotante and social networking
 {% endblock %}
 
 <!-- footer -->
-{% include 'common/footer.html' %}
+{% block footer %}
+    {% include 'common/footer.html' %}
+{% endblock %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-03 19:22+0000\n"
+"POT-Creation-Date: 2017-02-02 01:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,457 +19,457 @@ msgstr ""
 
 #: back_office/templates/administracion/autopujas.html:9
 msgid "Mis autopujas"
-msgstr ""
+msgstr "My auto-bids"
 
 #: back_office/templates/administracion/autopujas.html:17
 #: templates/comprar_paquete.html:9
 msgid "Cantidad de bids"
-msgstr ""
+msgstr "Number of bids"
 
 #: back_office/templates/administracion/autopujas.html:18
 #: back_office/templates/administracion/edit_auto_puja.html:36
 msgid "Art&iacute;culo"
-msgstr ""
+msgstr "Item"
 
 #: back_office/templates/administracion/autopujas.html:19
 #: back_office/templates/administracion/improve_membership.html:19
 #: back_office/templates/administracion/publicidad.html:25
 #: back_office/templates/administracion/shopingcart.html:53
 msgid "Opciones"
-msgstr ""
+msgstr "Options"
 
 #: back_office/templates/administracion/autopujas.html:51
 #: back_office/templates/administracion/edit_auto_puja.html:48
 msgid "Adicionar Autopuja"
-msgstr ""
+msgstr "Add auto-bid"
 
 #: back_office/templates/administracion/bank.html:23
 msgid "Estado por plan de compensacion"
-msgstr ""
+msgstr "State by compensation plan"
 
 #: back_office/templates/administracion/bank.html:30
 msgid "No. Plan"
-msgstr ""
+msgstr "Plan Number"
 
 #: back_office/templates/administracion/bank.html:31
 #: back_office/templates/administracion/publicidad.html:23
 msgid "Nombre"
-msgstr ""
+msgstr "Name"
 
 #: back_office/templates/administracion/bank.html:33
 msgid "Minimo Tipo de usuario"
-msgstr ""
+msgstr "Minimum user type"
 
 #: back_office/templates/administracion/bank.html:34
 msgid "Minima Membresia"
-msgstr ""
+msgstr "Minimum Membership"
 
 #: back_office/templates/administracion/bank.html:35
 msgid "Cantidad de usuarios en red"
-msgstr ""
+msgstr "Amount of network users"
 
 #: back_office/templates/administracion/bank.html:36
 msgid "Cantidad de dinero"
-msgstr ""
+msgstr "Amount of money"
 
 #: back_office/templates/administracion/bank.html:37
 msgid "Cantidad de puntos"
-msgstr ""
+msgstr "Amount of points"
 
 #: back_office/templates/administracion/bank.html:58
 msgid "Estad&iacute;sticas por plan"
-msgstr ""
+msgstr "Statistics by plan"
 
 #: back_office/templates/administracion/bank.html:64
 msgid "Plan"
-msgstr ""
+msgstr "Plan"
 
 #: back_office/templates/administracion/bank.html:65
 msgid "Cantidad"
-msgstr ""
+msgstr "Quantity"
 
 #: back_office/templates/administracion/bank.html:66
 #: back_office/templates/administracion/publicidad.html:24
 msgid "Descripci&oacute;n"
-msgstr ""
+msgstr "Description"
 
 #: back_office/templates/administracion/bank.html:67
 msgid "&Uacute;ltimo Dep&oacute;sito"
-msgstr ""
+msgstr "Last Deposit"
 
 #: back_office/templates/administracion/bids_packages.html:16
 #: templates/all_packages.html:16
 msgid "Contiene:"
-msgstr ""
+msgstr "Contains:"
 
 #: back_office/templates/administracion/bids_packages.html:19
 #: templates/all_packages.html:19
 msgid "Comprar"
-msgstr ""
+msgstr "Buy"
 
 #: back_office/templates/administracion/edit_auto_puja.html:19
 msgid "Edit Autopuja"
-msgstr ""
+msgstr "Edit Auto-bid"
 
 #: back_office/templates/administracion/edit_auto_puja.html:21
 msgid "Add Autopuja"
-msgstr ""
+msgstr "Add Auto-bid"
 
 #: back_office/templates/administracion/edit_auto_puja.html:30
 msgid "Cantidad de pujas"
-msgstr ""
+msgstr "Number of bids"
 
 #: back_office/templates/administracion/improve_membership.html:9
 #: back_office/templates/administracion/shopingcart.html:43
 msgid "Carrito de compra"
-msgstr ""
+msgstr "Shopping cart"
 
 #: back_office/templates/administracion/improve_membership.html:16
 #: back_office/templates/administracion/shopingcart.html:50
 msgid "No."
-msgstr ""
+msgstr "No."
 
 #: back_office/templates/administracion/improve_membership.html:17
 #: back_office/templates/administracion/shopingcart.html:51
 msgid "Art&iacute;culo ganado"
-msgstr ""
+msgstr "Won item"
 
 #: back_office/templates/administracion/improve_membership.html:18
 #: back_office/templates/administracion/shopingcart.html:52
 #: templates/common/seccion_derecha.html:58
 msgid "Precio"
-msgstr ""
+msgstr "Price"
 
 #: back_office/templates/administracion/messages.html:48
 msgid "Enviar mensaje"
-msgstr ""
+msgstr "Send message"
 
 #: back_office/templates/administracion/messages.html:51
 msgid "Enviar a:"
-msgstr ""
+msgstr "Send to:"
 
 #: back_office/templates/administracion/messages.html:55
 msgid "Seleccione un usuario"
-msgstr ""
+msgstr "Select a user"
 
 #: back_office/templates/administracion/messages.html:64
 msgid "Mensaje:"
-msgstr ""
+msgstr "Message:"
 
 #: back_office/templates/administracion/pago.html:21
 msgid "Est&aacute;s a punto de comprar los siguientes productos"
-msgstr ""
+msgstr "You're about to buy the following products"
 
 #: back_office/templates/administracion/profile-edit.html:9
 #: back_office/templates/administracion/profile-show.html:9
 #: back_office/templates/register.html:88
 msgid "!!!Algunos campos requieren su atenci&oacute;n!!!"
-msgstr ""
+msgstr "Some fields require your attention!!!"
 
 #: back_office/templates/administracion/profile-edit.html:21
 msgid "Username"
-msgstr ""
+msgstr "Username"
 
 #: back_office/templates/administracion/profile-edit.html:28
 #: back_office/templates/administracion/profile-show.html:38
 msgid "Correo"
-msgstr ""
+msgstr "Email"
 
 #: back_office/templates/administracion/profile-edit.html:37
 #: templates/common/header_login.html:28
 msgid "Contraseña"
-msgstr ""
+msgstr "Password"
 
 #: back_office/templates/administracion/profile-edit.html:44
 msgid "Confirmar contraseña"
-msgstr ""
+msgstr "Confirm Password"
 
 #: back_office/templates/administracion/profile-edit.html:54
 #: back_office/templates/administracion/profile-show.html:47
 msgid "Direccion"
-msgstr ""
+msgstr "Address"
 
 #: back_office/templates/administracion/profile-edit.html:62
 #: back_office/templates/administracion/profile-show.html:53
 #: back_office/templates/register.html:136
 msgid "Ciudad"
-msgstr ""
+msgstr "City"
 
 #: back_office/templates/administracion/profile-edit.html:69
 #: back_office/templates/administracion/profile-show.html:59
 #: back_office/templates/register.html:143
 msgid "Provincia"
-msgstr ""
+msgstr "Province"
 
 #: back_office/templates/administracion/profile-edit.html:79
 #: back_office/templates/administracion/profile-show.html:67
 msgid "País"
-msgstr ""
+msgstr "Country"
 
 #: back_office/templates/administracion/profile-edit.html:86
 #: back_office/templates/administracion/profile-show.html:73
 msgid "Teléfono"
-msgstr ""
+msgstr "Phone"
 
 #: back_office/templates/administracion/profile-edit.html:93
 #: back_office/templates/administracion/profile-show.html:79
 msgid "Seudonimo"
-msgstr ""
+msgstr "Nickname"
 
 #: back_office/templates/administracion/profile-edit.html:102
 #: back_office/templates/register.html:175
 msgid "Identificador Whatsapp"
-msgstr ""
+msgstr "Whatsapp identifier"
 
 #: back_office/templates/administracion/profile-edit.html:110
 #: back_office/templates/register.html:182
 msgid "Identificador Skype"
-msgstr ""
+msgstr "Skype identifier"
 
 #: back_office/templates/administracion/profile-edit.html:123
 msgid "Cancelar"
-msgstr ""
+msgstr "Cancel"
 
 #: back_office/templates/administracion/profile-edit.html:125
 msgid "Modificar"
-msgstr ""
+msgstr "Edit"
 
 #: back_office/templates/administracion/profile-show.html:16
 msgid "Perfil de usuario"
-msgstr ""
+msgstr "User profile"
 
 #: back_office/templates/administracion/profile-show.html:24
 msgid "Avatar"
-msgstr ""
+msgstr "Avatar"
 
 #: back_office/templates/administracion/profile-show.html:32
 #: back_office/templates/register.html:99 templates/common/header_login.html:27
 msgid "Usuario"
-msgstr ""
+msgstr "User"
 
 #: back_office/templates/administracion/profile-show.html:87
 msgid "Whatsapp ID"
-msgstr ""
+msgstr "Whatsapp ID"
 
 #: back_office/templates/administracion/profile-show.html:93
 msgid "Skype ID"
-msgstr ""
+msgstr "Skype ID"
 
 #: back_office/templates/administracion/profile-show.html:108
 msgid "Editar perfil"
-msgstr ""
+msgstr "Edit profile"
 
 #: back_office/templates/administracion/publicidad.html:44
 msgid "Descargar"
-msgstr ""
+msgstr "Download"
 
 #: back_office/templates/administracion/red_miembros.html:12
 msgid "Enviar invitaci&oacute;n"
-msgstr ""
+msgstr "Send invitation"
 
 #: back_office/templates/administracion/red_miembros.html:13
 msgid "Nombre de destinatario"
-msgstr ""
+msgstr "Recipient name"
 
 #: back_office/templates/administracion/red_miembros.html:16
 msgid "Correo del destinatario"
-msgstr ""
+msgstr "Recipient email"
 
 #: back_office/templates/administracion/shopingcart.html:7
 msgid "Eliminar art&iacute;culo ganado"
-msgstr ""
+msgstr "Delete Won Item"
 
 #: back_office/templates/administracion/shopingcart.html:10
 msgid ""
 "Est&aacute;s a punto de eliminar un art&iacute;culo que ganaste en una "
 "subasta"
-msgstr ""
+msgstr "You're about to remove a won article"
 
 #: back_office/templates/administracion/shopingcart.html:13
 msgid "Est&aacute;s seguro de continuar"
-msgstr ""
+msgstr "Are you sure you want to continue"
 
 #: back_office/templates/administracion/shopingcart.html:85
 msgid "Realizar pago"
-msgstr ""
+msgstr "Make payment"
 
 #: back_office/templates/administracion/shopingcart.html:91
 #: back_office/templates/administracion/shopingcart.html:96
 msgid "Lo sentimos, Ud no tiene art&iacute;culos ganados actualmente"
-msgstr ""
+msgstr "We're sorry, you currently have no won items"
 
 #: back_office/templates/common_back_office/base_back_office_new.html:27
 #: back_office/templates/common_back_office/left_side_content.html:41
 msgid "Hola:"
-msgstr ""
+msgstr "Hello:"
 
 #: back_office/templates/common_back_office/base_back_office_new.html:35
 msgid "Mi cuenta"
-msgstr ""
+msgstr "My account"
 
 #: back_office/templates/common_back_office/base_back_office_new.html:42
 msgid "Carrito"
-msgstr ""
+msgstr "Shopping cart"
 
 #: back_office/templates/common_back_office/base_back_office_new.html:52
 #: back_office/templates/common_back_office/left_side_content.html:137
 msgid "Auto-Pujas"
-msgstr ""
+msgstr "Auto-Bids"
 
 #: back_office/templates/common_back_office/base_back_office_new.html:59
 #: back_office/templates/common_back_office/left_side_content.html:142
 msgid "Mensajes"
-msgstr ""
+msgstr "Messagges"
 
-#: back_office/templates/common_back_office/base_back_office_new.html:85
+#: back_office/templates/common_back_office/base_back_office_new.html:91
 #: back_office/templates/common_back_office/left_side_content.html:156
 #: templates/common/header_login.html:22
 msgid "Salir"
-msgstr "Exit"
-
-#: back_office/templates/common_back_office/base_back_office_new.html:104
-#: back_office/templates/common_back_office/left_side_content.html:124
-msgid "Mi Dashboard"
-msgstr ""
+msgstr "Log out"
 
 #: back_office/templates/common_back_office/base_back_office_new.html:110
-msgid "Subastas activas"
-msgstr ""
+#: back_office/templates/common_back_office/left_side_content.html:124
+msgid "Mi Dashboard"
+msgstr "My Dashboard"
 
-#: back_office/templates/common_back_office/base_back_office_new.html:117
-msgid "Paquetes de bids"
-msgstr ""
+#: back_office/templates/common_back_office/base_back_office_new.html:116
+msgid "Subastas activas"
+msgstr "Active Auctions"
 
 #: back_office/templates/common_back_office/base_back_office_new.html:123
-msgid "Ver tu red"
-msgstr ""
+msgid "Paquetes de bids"
+msgstr "Bid bundles"
 
-#: back_office/templates/common_back_office/base_back_office_new.html:130
-msgid "Publicidad"
-msgstr ""
+#: back_office/templates/common_back_office/base_back_office_new.html:129
+msgid "Ver tu red"
+msgstr "See your network"
 
 #: back_office/templates/common_back_office/base_back_office_new.html:136
-msgid "Cuenta bancaria"
-msgstr ""
+msgid "Publicidad"
+msgstr "Advertising"
 
 #: back_office/templates/common_back_office/base_back_office_new.html:142
-msgid "Ver retos"
-msgstr ""
+msgid "Cuenta bancaria"
+msgstr "Bank account"
 
-#: back_office/templates/common_back_office/base_back_office_new.html:177
+#: back_office/templates/common_back_office/base_back_office_new.html:148
+msgid "Ver retos"
+msgstr "See challenges"
+
+#: back_office/templates/common_back_office/base_back_office_new.html:183
 msgid "Copyright 2016. Todos los derechos reservados."
-msgstr ""
+msgstr "Copyright 2016. All rights reserved."
 
 #: back_office/templates/common_back_office/left_side_content.html:42
 msgid "Ud tiene "
-msgstr ""
+msgstr "You have"
 
 #: back_office/templates/common_back_office/left_side_content.html:42
 msgid "mensajes sin leer"
-msgstr ""
+msgstr "unread messages"
 
 #: back_office/templates/common_back_office/left_side_content.html:43
 msgid "Su URL en williambid:"
-msgstr ""
+msgstr "Your Williambid URL:"
 
 #: back_office/templates/common_back_office/left_side_content.html:53
 msgid "Balance general"
-msgstr ""
+msgstr "Balance sheet"
 
 #: back_office/templates/common_back_office/left_side_content.html:56
 msgid "Ver su banco William"
-msgstr ""
+msgstr "See your William bank"
 
 #: back_office/templates/common_back_office/left_side_content.html:62
 msgid "Membresia"
-msgstr ""
+msgstr "Membership"
 
 #: back_office/templates/common_back_office/left_side_content.html:66
 msgid "Mejorar membres&iacute;a"
-msgstr ""
+msgstr "Improve Membership"
 
 #: back_office/templates/common_back_office/left_side_content.html:67
 msgid "Up"
-msgstr ""
+msgstr "Up"
 
 #: back_office/templates/common_back_office/left_side_content.html:73
 msgid "Valida durante:"
-msgstr ""
+msgstr "Valid for"
 
 #: back_office/templates/common_back_office/left_side_content.html:84
 msgid "Tipo Usuario"
-msgstr ""
+msgstr "User type"
 
 #: back_office/templates/common_back_office/left_side_content.html:98
 msgid "Red"
-msgstr ""
+msgstr "Network"
 
 #: back_office/templates/common_back_office/left_side_content.html:104
 #: templates/common/seccion_derecha.html:57
 msgid "Pujas"
-msgstr ""
+msgstr "Bids"
 
 #: back_office/templates/common_back_office/left_side_content.html:110
 msgid "Puntos"
-msgstr ""
+msgstr "Scores"
 
 #: back_office/templates/common_back_office/left_side_content.html:129
 msgid "Mi cesto"
-msgstr ""
+msgstr "My basket"
 
 #: back_office/templates/common_back_office/left_side_content.html:150
 msgid "Configuraci&oacute;n"
-msgstr ""
+msgstr "Settings"
 
 #: back_office/templates/index_back_office.html:90
 msgid "Balance general dividido por plan"
-msgstr ""
+msgstr "Balance sheet divided by plan"
 
 #: back_office/templates/register.html:29
 msgid "Regresar al sitio web"
-msgstr ""
+msgstr "Return to website"
 
 #: back_office/templates/register.html:35
 msgid "Contactar con el administrador"
-msgstr ""
+msgstr "Contact administrator"
 
 #: back_office/templates/register.html:106
 msgid "Direccion de correo"
-msgstr ""
+msgstr "Email address"
 
 #: back_office/templates/register.html:115
 msgid "Contrase&ntilde;a"
-msgstr ""
+msgstr "Password"
 
 #: back_office/templates/register.html:119
 msgid "Confirme contrase&ntilde;a"
-msgstr ""
+msgstr "Confirm password"
 
 #: back_office/templates/register.html:129
 msgid "Direcci&oacute;n"
-msgstr ""
+msgstr "Address"
 
 #: back_office/templates/register.html:152
 msgid "Pa&iacute;s"
-msgstr ""
+msgstr "Country"
 
 #: back_office/templates/register.html:159
 msgid "Tel&eacute;fono"
-msgstr ""
+msgstr "Phone"
 
 #: back_office/templates/register.html:166
 msgid "Seud&oacute;nimo"
-msgstr ""
+msgstr "Nickname"
 
 #: back_office/templates/register.html:192
 msgid "Aceptar"
-msgstr ""
+msgstr "Accept"
 
-#: templates/about.html:6
+#: templates/about_salva.html:6
 msgid "Acerca de nosotros"
-msgstr ""
+msgstr "About us"
 
-#: templates/about.html:18
+#: templates/about_salva.html:18
 msgid ""
 "\n"
 "\n"
@@ -532,7 +532,7 @@ msgstr ""
 
 #: templates/business_opportunity.html:55
 msgid "C&oacute;mo funciona"
-msgstr ""
+msgstr "How it works"
 
 #: templates/common/footer.html:17 templates/common/top_container.html:26
 msgid "Inicio"
@@ -544,15 +544,15 @@ msgstr "About us"
 
 #: templates/common/footer.html:23 templates/common/top_container.html:35
 msgid "Oportunidad de negocio"
-msgstr ""
+msgstr "Business opportunity"
 
 #: templates/common/footer.html:26
 msgid "Planes de compenasación"
-msgstr ""
+msgstr "Compensation Plans"
 
 #: templates/common/footer.html:33
 msgid "Redes Sociales"
-msgstr ""
+msgstr "Social networks"
 
 #: templates/common/footer.html:39
 msgid ""
@@ -563,87 +563,87 @@ msgstr ""
 
 #: templates/common/footer.html:72
 msgid "Todos los derechos reservados"
-msgstr ""
+msgstr "All rights reserved"
 
 #: templates/common/header_login.html:20
 msgid "Bienvenido"
-msgstr ""
+msgstr "Welcome"
 
 #: templates/common/header_login.html:21
 msgid "Mi Cuenta"
-msgstr ""
+msgstr "My account"
 
 #: templates/common/header_login.html:31
 msgid "Entrar"
-msgstr ""
+msgstr "Log in"
 
 #: templates/common/header_login.html:34
 msgid "Registrarse"
-msgstr ""
+msgstr "Register"
 
 #: templates/common/header_login.html:42
 msgid "¿Olvido contraseña?"
-msgstr ""
+msgstr "Forgot Password?"
 
 #: templates/common/header_login.html:44
 msgid "Credenciales incorrectas. Intente de nuevo."
-msgstr ""
+msgstr "Wrong Credentials. Try again."
 
 #: templates/common/main_content.html:13
 msgid "SUBASTAS ACTIVAS"
-msgstr ""
+msgstr "ACTIVE AUCTIONS"
 
 #: templates/common/seccion_derecha.html:59
 msgid "Ahorro"
-msgstr ""
+msgstr "Savings"
 
 #: templates/common/seccion_derecha.html:73
 msgid "Comprar paquete"
-msgstr ""
+msgstr "Buy Package"
 
 #: templates/common/seccion_derecha.html:89
 msgid "Próximas Subastas"
-msgstr ""
+msgstr "Upcoming Auctions"
 
 #: templates/common/seccion_derecha.html:111
 msgid "Últimos Ganadores"
-msgstr ""
+msgstr "Latest Winners"
 
 #: templates/common/seccion_derecha.html:133
 msgid "Usuarios en línea"
-msgstr ""
+msgstr "Online users"
 
 #: templates/common/top_container.html:29
 msgid "Acerca de..."
-msgstr "About us..."
+msgstr "About..."
 
 #: templates/common/top_container.html:32
 msgid "Club de socios"
-msgstr ""
+msgstr "Membership Club"
 
 #: templates/common/top_container.html:38
 msgid "Comprar pujas"
-msgstr ""
+msgstr "Buy bids"
 
 #: templates/pagina_inicio/box_product.html:4
 msgid "Mensaje de error"
-msgstr ""
+msgstr "Error message"
 
 #: templates/pagina_inicio/box_product.html:7
 msgid "No tienes suficientes bids"
-msgstr ""
+msgstr "You don't have enough bids"
 
 #: templates/pagina_inicio/box_product.html:40
 msgid "Terminada"
-msgstr ""
+msgstr "Finished"
 
 #: templates/pagina_inicio/box_product.html:105
 msgid "Vendida"
-msgstr ""
+msgstr "Sold"
 
 #: templates/pagina_inicio/box_product.html:107
 msgid "Pujar"
-msgstr ""
+msgstr "Bid up"
 
 #: templates/pagina_inicio/box_product.html:120
 msgid ""
@@ -654,39 +654,39 @@ msgstr ""
 
 #: templates/pagina_inicio/tabs.html:5
 msgid "Ultimos ganadores"
-msgstr ""
+msgstr "Latest winners"
 
 #: templates/pagina_inicio/tabs.html:6
 msgid "Próximas subastas"
-msgstr ""
+msgstr "Upcoming auctions"
 
 #: templates/pagina_inicio/tabs.html:16 templates/pagina_inicio/tabs.html:61
 msgid "Productos"
-msgstr ""
+msgstr "Products"
 
 #: templates/pagina_inicio/tabs.html:17 templates/pagina_inicio/tabs.html:62
 msgid "Precio/Postor"
-msgstr ""
+msgstr "Price/Bidder"
 
 #: templates/pagina_inicio/tabs.html:18 templates/pagina_inicio/tabs.html:63
 msgid "Cuenta Atras"
-msgstr ""
+msgstr "Countdown"
 
 #: templates/pagina_inicio/tabs.html:45
 msgid "VENDIDO"
-msgstr ""
+msgstr "SOLD"
 
 #: templates/pagina_inicio/tabs.html:85
 msgid "En espera"
-msgstr ""
+msgstr "On hold"
 
 #: templates/pagina_inicio/tabs.html:87
 msgid "PROXIMAMENTE"
-msgstr ""
+msgstr "COMING SOON"
 
 #: templates/terms.html:6
 msgid "T&eacute;rminos y condiciones"
-msgstr ""
+msgstr "Terms and Conditions"
 
 #: templates/terms.html:18
 msgid ""
@@ -1158,8 +1158,12 @@ msgstr ""
 
 #: william/settings.py:122
 msgid "English"
-msgstr ""
+msgstr "English"
 
 #: william/settings.py:123
 msgid "Spanish"
-msgstr ""
+msgstr "Spanish"
+
+#: william/settings.py:124
+msgid "Portugues"
+msgstr "Portuguese"
