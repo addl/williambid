@@ -24,7 +24,7 @@
                 <div class="tr">
                     <div class="td picture">
                         {% if subasta.contenido.articulo %}
-                            <img src="/{{ subasta.contenido.articulo.imagen }}" width="112" height="80"></div>
+                            <img src="/static/media/{{ subasta.contenido.articulo.imagen }}" width="112" height="80"></div>
                         {% else %}
                             <img src="{% static "back_office/images/icons/dMoney.png" %}" width="90" height="60"></div>
                         {% endif %}
@@ -68,7 +68,7 @@
             {% for subasta in proximas_subastas %}
                 <div class="tr">
                     <div class="td picture">
-                        <img src="/{{ subasta.contenido.articulo.imagen }}" width="112" height="80">
+                        <img src="/static/media/{{ subasta.contenido.articulo.imagen }}" width="112" height="80">
                     </div>
                     <div class="td type">
                         <div class="title-product">

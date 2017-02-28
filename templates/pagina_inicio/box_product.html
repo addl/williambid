@@ -20,7 +20,7 @@
                         <div class="image">
                             <a class="fancybox fancybox.iframe" href="#">
                                 {% if subasta.contenido.articulo %}
-                                    <img src="/{{ subasta.contenido.articulo.imagen }}"
+                                    <img src="/static/media/{{ subasta.contenido.articulo.imagen }}"
                                          alt="iMac" width="160" height="110"/>
                                     {# sino tiene articulo es un paquete de bids, y buscamos la imagen correspondiente #}
                                 {% else %}

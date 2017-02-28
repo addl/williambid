@@ -25,7 +25,7 @@
             <div class="wUserInfo">
                 <a href="#" title="" class="wUserPic">
                     {% if subasta_vendida.subasta.contenido.articulo %}
-                        <img style="max-width: 50px;" src="/{{ subasta_vendida.subasta.contenido.articulo.imagen }}"
+                        <img style="max-width: 50px;" src="/static/media/{{ subasta_vendida.subasta.contenido.articulo.imagen }}"
                              alt="">
                     {% else %}
                         <img style="max-width: 50px;" src="{% static "back_office/images/icons/dMoney.png" %}" alt="">

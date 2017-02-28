@@ -103,6 +103,7 @@ USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
+MEDIA_ROOT = "/var/www/williambid/static/media"
 
 STATIC_URL = '/static/'
 
@@ -217,7 +218,7 @@ LOGGING = {
             'handlers': ['console', 'logfile'],
             'level': 'DEBUG',
         },
-        'william': {
+        'williambid': {
             'handlers': ['console', 'logfile'],
             'level': 'DEBUG',
         },
