@@ -1,4 +1,6 @@
 import datetime
+import logging
+
 from datetime import time
 from itertools import chain
 import random
@@ -7,7 +9,6 @@ from back_office.util import obtener_usuario_random
 from williambid.utils import generar_simple_nick
 
 __author__ = 'bryan'
-import logging
 log = logging.getLogger(__name__)
 
 from williambid.models import *

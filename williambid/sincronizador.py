@@ -48,7 +48,7 @@ class SincronizadorSingleInstance():
                 if articulo.cantidad_de_articulos > 0:
                     # esto garantiza que ni las subastas activas ni las de espera representen al mismo articulo
                     if not verificar_que_articulo_no_este_en_puja(articulo.id):
-                        print "Agregando al articulo %s automaticamente en subasta" % articulo
+                        log.info("Agregando al articulo %s automaticamente en subasta" % articulo)
                         # creamos la subasta y la guardamos en BD
                         subasta = crear_subasta_de_valores_x_defecto(articulo)
                         subasta.save(force_insert=True)
@@ -70,7 +70,7 @@ class SincronizadorSingleInstance():
             return False
 
         def asignar_robots_a_subastas(self, subasta_id):
-            print "Asignando robot a subasta desde Synchronizer"
+            log.info("Asignando robot a subasta desde Synchronizer")
             self.robot_manager.asignar_robot_a_subasta(subasta_id=subasta_id)
 
         # en cada iteracion o llamada a este metodo, pujar automaticamente 1 sola vez sobre cada articulo en subasta,
@@ -89,7 +89,7 @@ class SincronizadorSingleInstance():
                     usuario = autopuja.usuario
                     if usuario.perfilusuario.cantidad_de_bids > 0 and autopuja.cantidad_pujas > 0:
                         log.info("Autopujando en subasta %s con usuario %s" % (subasta, usuario))
-                        print("Autopujando en subasta %s con usuario %s" % (subasta, usuario))
+                        log.info("Autopujando en subasta %s con usuario %s" % (subasta, usuario))
                         # descontar bids al usuario
                         result = pujar_subasta(id_subasta=subasta.id, usuario=usuario)
                         if result:
@@ -112,7 +112,7 @@ class SincronizadorSingleInstance():
                 # preguntamos por un gganador, pq puede darse el caso q el usuario aggregue una subasta y cometa un
                 # error en las fechas, las cuales pueden ser ya pasadas, en ese caso, no hay ganador
                 if now >= fecha_exp and subasta.ganador:
-                    print "Subasta terminada..."
+                    log.info("Subasta terminada...")
                     # si expiro ya, la damos por terminada,
                     subasta.estado = Subasta.FINISHED
                     subasta.save(force_update=True)
