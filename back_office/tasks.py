@@ -13,7 +13,7 @@ manager_planes = PlanesManagerSingleton.get_instance()
 # debe correr cada un mes, una vez al mes
 @app.task
 def run_plans_manager():
-    print "Running PlansManager with instance: %s " % manager_planes
+    log.info("Running PlansManager with instance: %s " % manager_planes)
     manager_planes.execute_tasks()
 
 
@@ -21,7 +21,7 @@ def run_plans_manager():
 @app.task
 def run_short_periodical_tasks():
     #manager_planes = PlanesManagerSingleton.get_instance()
-    print "Running PlansManager with instance: %s " % manager_planes
+    log.info("Running PlansManager with instance: %s " % manager_planes)
     manager_planes.plan_compensacion_cinco.cerrar_retos_vencidos_por_fecha()
 
 
@@ -37,13 +37,13 @@ def run_plan_zero_task():
 # tareas que son necesarias intercambiar con redis, para obtener resultado de los planes
 @app.task
 def obtener_primera_generacion_de(user_id):
-    print "Searching first generation for user_id: %s " % user_id
+    log.info("Searching first generation for user_id: %s " % user_id)
     return manager_planes.arbol_general.obtener_primera_generacion_de(user_id)
 
 
 @app.task
 def registrar_usuario_nuevo_a_planes_de_compensacion(user_nuevo, user_padre):
-    print "Registering nuevo usuario: %s a los planes de compensacion" % user_nuevo
+    log.info("Registering nuevo usuario: %s a los planes de compensacion" % user_nuevo)
     manager_planes.registrar_usuario_a_planes_de_compensacion(user_nuevo, user_padre)
 
 

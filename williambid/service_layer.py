@@ -7,6 +7,8 @@ from back_office.util import obtener_usuario_random
 from williambid.utils import generar_simple_nick
 
 __author__ = 'bryan'
+import logging
+log = logging.getLogger(__name__)
 
 from williambid.models import *
 
@@ -20,7 +22,7 @@ def pujar_subasta(id_subasta, usuario):
                                       seconds=subasta.tiempo_regresivo.second)
         subasta.fecha_expiracion = datetime.now() + tiempo_expiracion
         subasta.ganador = usuario
-        print "Pujando la subasta %s, expirara en %s aproximadamente" % (subasta, subasta.fecha_expiracion)
+        log.info("Pujando la subasta %s, expirara en %s aproximadamente" % (subasta, subasta.fecha_expiracion))
         subasta.save(update_fields=['precio_actual', 'fecha_expiracion', 'ganador'])
         return subasta
     return None
@@ -88,7 +90,7 @@ def crear_subasta_de_valores_x_defecto(articulo):
 
 
 def crear_subasta_vendida_a_partir_de_subasta(subasta):
-    print "Saving subasta vendida with subasta %s and shopingcart %s" % (subasta, subasta.ganador.shoppinggcart)
+    log.info("Saving subasta vendida with subasta %s and shopingcart %s" % (subasta, subasta.ganador.shoppinggcart))
     p = SubastaVendida(subasta=subasta, shoping_cart=subasta.ganador.shoppinggcart)
     # p.contenido = subasta.contenido
     # p.tipo_subasta = subasta.tipo_subasta
@@ -138,7 +140,7 @@ def crear_usuario_para_robot():
         perfil_usuario.tipo_usuario = tipo_usuario
         # asignamos membrasia a los usuarios robot aleatoriamente
         membresia = random.choice(Membresia.objects.all())
-        print "Asignando a robot %s la membresia %s" % (seudonimo, membresia.tipo_membresia.nombre)
+        log.info("Asignando a robot %s la membresia %s" % (seudonimo, membresia.tipo_membresia.nombre))
         perfil_usuario.membresia = membresia
         # asignamos un padre al usuario
         parent = random.choice(User.objects.exclude(id=usuario.id))
@@ -149,11 +151,11 @@ def crear_usuario_para_robot():
         robot_db = Robot()
         robot_db.usuario = usuario
         robot_db.save()
-        print "Creado robot %s" % seudonimo
+        log.info("Creado robot %s" % seudonimo)
         # es posible que el seudonimo ya este en base de datos y como es unico
         # pq tambien se usa para username, puede haber excepcion
     except Exception, e:
-        print(e)
+        log.error(e)
         # return crear_usuarios_para_robots()
     return usuario
 
@@ -162,6 +164,6 @@ def verificar_que_articulo_no_este_en_puja(articulo_id):
     subastas = obtener_subastas_pujando()
     for p in subastas:
         if p.contenido.id == articulo_id:
-            print "Articulo %s esta ya en subastas..." % articulo_id
+            log.info("Articulo %s esta ya en subastas..." % articulo_id)
             return True
     return False
