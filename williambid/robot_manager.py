@@ -2,7 +2,8 @@ from williambid.models import Robot as DBRobot, Subasta
 from williambid.robots import Robot as PythonRobot
 from williambid.service_layer import crear_usuario_para_robot
 from williambid.models import Subasta
-
+import logging
+log = logging.getLogger(__name__)
 
 class RobotManager:
 
@@ -21,7 +22,7 @@ class RobotManager:
         if len(DBRobot.objects.filter(subasta__id__isnull=True).all()) < 1:
             self.crear_usuarios_robots()
         db_candidate_robot = DBRobot.objects.filter(subasta__id__isnull=True).first()
-        print "Asignando robot a subasta %s" % str(subasta_id)
+        log.info("Asignando robot a subasta %s" % str(subasta_id))
         db_candidate_robot.subasta = Subasta.objects.get(id=subasta_id)
         db_candidate_robot.save(force_update=True)
         # creamos el robot script
@@ -34,14 +35,14 @@ class RobotManager:
     # asignar_robot_a_subasta = staticmethod(asignar_robot_a_subasta)
 
     def liberar_robots_de_subastas_terminadas(self):
-        print "Attempting release robots ..."
+        log.info("Attempting release robots ...")
         robots_with_subastas = DBRobot.objects.filter(subasta__estado=Subasta.FINISHED).all()
         for robot in robots_with_subastas:
             robot.subasta = None
             robot.save(force_update=True)
-            print "Robots asiganados %s" % self.robots_asignados
+            log.info("Robots asiganados %s" % self.robots_asignados)
             if robot.id_robot in self.robots_asignados:
-                print "Killing ThreadScript %s" % robot.id_robot
+                log.warning("Killing ThreadScript %s" % robot.id_robot)
                 thread_script = self.robots_asignados[robot.id_robot]
                 if thread_script.isAlive():
                     thread_script.terminate()
@@ -52,6 +53,6 @@ class RobotManager:
         # si no hay suficientes robots
         if (len(robots_db) < self.cantidad_robot):
             user_robot = crear_usuario_para_robot()
-            print "Creando Usuario Robot: %s" % user_robot.username
+            log.info("Creando Usuario Robot: %s" % user_robot.username)
 
     # crear_usuarios_robots = staticmethod(crear_usuarios_robots)
