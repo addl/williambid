@@ -106,6 +106,8 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = "/var/www/williambid/static/"
+
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
