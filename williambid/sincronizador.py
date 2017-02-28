@@ -104,6 +104,7 @@ class SincronizadorSingleInstance():
                             # self.robot_manager.cambiar_robots_ya_no_ganan_subasta(subasta_id=subasta.id)
 
         def verificar_subastas_terminadas(self):
+            log.info("Verificando subastas terminadas**************")
             subastas = Subasta.objects.filter(estado=Subasta.ACTIVE)
             for subasta in subastas:
                 now = datetime.now()
