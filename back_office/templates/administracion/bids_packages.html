@@ -15,7 +15,7 @@
                                 <span>{{ package.nombre }}</span>
                                 <span>{% trans "Contiene:" %}{{ package.cantidad_de_bids }} bids</span>
                             </a>
-                            <a href="#" title="" class="wButton orangewB m10">
+                            <a href="/paquetes-bid/comprar/{{ package.id }}" title="" class="wButton orangewB m10">
                                 <span>{% trans "Comprar" %}</span>
                             </a>
                         </li>

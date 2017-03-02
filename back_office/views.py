@@ -3,6 +3,7 @@ import json
 
 import datetime
 
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.core import serializers
 from django.core.urlresolvers import reverse
@@ -16,7 +17,7 @@ from paypal.standard.forms import PayPalPaymentsForm
 from back_office.banco import obtener_factura_total_de_usuario
 from back_office.forms import RegistrationForm
 from back_office.models import Invitacion, Reto, EstadoRetoUsuario, Mensaje, AdvertisementTool, PlanCompensacion, \
-    WilliamPaypalTransaction
+    WilliamPaypalTransaction, ShoppingCartTransaction
 from back_office.my_math_module import msum
 from back_office.tasks import obtener_primera_generacion_de, registrar_usuario_nuevo_a_planes_de_compensacion
 from back_office.util import encriptar_usuario, generar_url_para_usuario_encriptado, desencriptar_nombre_de_usuario, \
@@ -30,7 +31,6 @@ from back_office.back_office_service_layer import esta_usuario_participando_en_r
 from williambid.utils import registrar_usuario, obtener_user_formato_json, actualizar_perfil_de_usuario
 import logging
 
-PAYPAL_WILLIAM_ADDRESS = "receiver_email@example.com"
 log = logging.getLogger(__name__)
 
 
@@ -169,10 +169,10 @@ def show_me_the_money(sender, **kwargs):
         ipn_obj = sender
         if ipn_obj.payment_status == ST_PP_COMPLETED:
             # Check that the receiver email is the same we previously
-            if ipn_obj.receiver_email != PAYPAL_WILLIAM_ADDRESS:
+            if ipn_obj.receiver_email != settings.PAYPAL_WILLIAM_ADDRESS:
                 # Not a valid payment
                 log.error('Aborting confirm sales, DIFFERENT EMAILS- receiver_email:%s != paypal_setting:%s') % (
-                ipn_obj.receiver_email, PAYPAL_WILLIAM_ADDRESS)
+                    ipn_obj.receiver_email, settings.PAYPAL_WILLIAM_ADDRESS)
                 return
             # ALSO we need to check the amount
             # Undertake some action depending upon `ipn_obj`.
@@ -222,10 +222,11 @@ def shopping_cart_payment(request):
         amounts.append(subasta_vendida.subasta.precio_actual)
     total_amount = msum(amounts)
     # store the amount in WilliamPaypalTransaction
-    william_txn = WilliamPaypalTransaction.objects.create(user=request.user, amount=total_amount)
+    william_txn = ShoppingCartTransaction.objects.create(user=request.user, amount=total_amount,
+                                                         cart_id=request.user.shoppinggcart.id)
     # What you want the button to do.
     paypal_dict = {
-        "business": PAYPAL_WILLIAM_ADDRESS,
+        "business": settings.PAYPAL_WILLIAM_ADDRESS,
         "amount": str(total_amount),
         "item_name": "name of the item",
         "invoice": "unique-invoice-id",

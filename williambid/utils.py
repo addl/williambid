@@ -1,9 +1,14 @@
 import json
+import os
 import random
 from django.contrib.auth.models import User
 from django.core import serializers
+from django.conf import settings
 from back_office.models import PerfilUsuario, Membresia, TipoUsuario
 from williambid.models import Robot, ShoppinggCart
+
+import logging
+log = logging.getLogger(__name__)
 
 VOCALES = ("a", "e", "i", "o", "u")
 CONSONANTES = ("b", "c", "d", "f", "h", "j", "k", "l", "m", "r", "v", "g", "t")
@@ -129,3 +134,10 @@ class OnlineUsers():
         return OnlineUsers.latest_users_online
 
     obtener_usuarios_online = staticmethod(obtener_usuarios_online)
+
+
+def findPlansFileDescriptorByLocale(locale_as_str):
+    url_to_file = os.path.join(settings.BASE_DIR, "static/files/plan_%s.pdf" % locale_as_str)
+    log.info("Downloading Plan Descriptor from %s" % url_to_file)
+    if os.path.isfile(url_to_file):
+        return open(url_to_file, "r")

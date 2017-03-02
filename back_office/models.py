@@ -120,7 +120,8 @@ class PlanCompensacion(models.Model):
     num_plan = models.IntegerField()
     title = models.CharField(max_length=50)
     descripcion = models.TextField()
-    requisito = models.BooleanField(default=True, help_text="Marque esta casilla si existe algun requisito para cobrar este plan")
+    requisito = models.BooleanField(default=True,
+                                    help_text="Marque esta casilla si existe algun requisito para cobrar este plan")
     # requisitos para cobrar el plan
     tipo_usuario = models.ForeignKey(TipoUsuario, null=True, default=1)
     membresia_minima = models.ForeignKey(TipoMembresia, null=True, default=1)
@@ -130,6 +131,7 @@ class PlanCompensacion(models.Model):
 
     def __str__(self):
         return "Plan de compensacion: %s" % self.num_plan
+
 
 # Plan de compensacion 6,7,8
 class Beneficios(models.Model):
@@ -165,3 +167,11 @@ class WilliamPaypalTransaction(models.Model):
     id = models.AutoField(primary_key=True, unique=True)
     user = models.ForeignKey(User)
     amount = models.FloatField(null=False)
+
+
+class PackageTransaction(WilliamPaypalTransaction):
+    pkt_id = models.IntegerField(null=False)
+
+
+class ShoppingCartTransaction(WilliamPaypalTransaction):
+    cart_id = models.IntegerField(null=False)

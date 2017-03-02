@@ -115,6 +115,8 @@ TEMPLATE_DIRS = (
 
 # A partir de aqui las configuraciones adicionadas por desarrolladores.
 
+PAYPAL_WILLIAM_ADDRESS = "receiver_email@example.com"
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )

@@ -3,7 +3,7 @@ from django.contrib import admin
 
 from back_office.views import mostrar_paquetes_de_bids
 from williambid.views import home_page, pujar, obtener_subasta_json, autenticar, salir, change_language, search, \
-    acerca_de, terminos, comprar_paquetes_de_bids, business_opportunity
+    acerca_de, terminos, comprar_paquetes_de_bids, business_opportunity, dispose_plans_descriptor_file
 
 admin.autodiscover()
 
@@ -19,6 +19,7 @@ urlpatterns = patterns('',
                        url(r'^about/$', acerca_de),
                        url(r'^terms/$', terminos),
                        url(r'^business-opportunity/$', business_opportunity),
+                       url(r'^plans_description/$', dispose_plans_descriptor_file),
                        url(r'^xhr/data/subasta/(\d+)/$', obtener_subasta_json),
                        url(r'^xhr/pujar/(\d+)/$', pujar),
                        url(r'^paquetes-bid/comprar$', mostrar_paquetes_de_bids),

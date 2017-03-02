@@ -1,21 +1,26 @@
+import os
 from itertools import chain
 import json
 import datetime
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.gis.db.backends import mysql
 from django.core import serializers
+from django.core.urlresolvers import reverse
 from django.http.response import HttpResponse, HttpResponseRedirect, HttpResponseForbidden
 from django.shortcuts import render, render_to_response
 
 from django.template.context import RequestContext
+from paypal.standard.forms import PayPalPaymentsForm
 
-from back_office.models import PlanCompensacion
+from back_office.models import PlanCompensacion, WilliamPaypalTransaction, PackageTransaction
+from back_office.my_math_module import msum
 from williambid.models import Subasta, PaqueteBid
 from williambid.robot_manager import RobotManager
 from williambid.service_layer import pujar_subasta, obtener_subastas_pujando, obtener_subastas_vendidas_recientemente, \
     obtener_subastas_vendidas, buscar_subastas
 from williambid.tasks import asignar_robots_a_subastas
-from williambid.utils import obtener_subasta_formato_json, OnlineUsers
+from williambid.utils import obtener_subasta_formato_json, OnlineUsers, findPlansFileDescriptorByLocale
 # language stuff
 from django.utils import translation
 from django.conf import settings
@@ -68,6 +73,16 @@ def terminos(request):
 
 def business_opportunity(request):
     return render_to_response('business_opportunity.html', common_data(request, [{'plans': PlanCompensacion.objects.all()}]))
+
+
+def dispose_plans_descriptor_file(request):
+    my_file = findPlansFileDescriptorByLocale(request.LANGUAGE_CODE)
+    response = HttpResponse(my_file.read(), content_type='application/octet-stream')
+    # print 'attaching ', download_file
+    response['Content-Disposition'] = 'attachment; filename="%s"' % os.path.split(my_file.name)[1]
+    # response['Content-Disposition'] = 'attachment; filename="%s"' % my_file.name
+    # response['X-Sendfile'] = smart_str(process.file_results)
+    return response
 
 
 def home_page(request, username=None):
@@ -136,9 +151,36 @@ def obtener_subasta_json(request, subasta_id):
                    ensure_ascii=False), content_type='text/html')
 
 
+@login_required(login_url='/')
 def comprar_paquetes_de_bids(request, paquete_id):
     pkte = PaqueteBid.objects.get(id=paquete_id)
-    return render_to_response('comprar_paquete.html', common_data(request, [{'paquete': pkte}]))
+    # calculate the whole price
+    notify_url = "https://%s%s" % (request.get_host(), reverse('paypal-ipn'))
+    return_url = "https://%s/usuarios/back-office/administracion/payment/return/" % request.get_host()
+    cancel_url = "https://%s/usuarios/back-office/administracion/payment/cancelation/" % request.get_host()
+    amounts = []
+    for subasta_vendida in request.user.shoppinggcart.subastavendida_set.all():
+        amounts.append(subasta_vendida.subasta.precio_actual)
+    total_amount = pkte.precio
+    # store the amount in WilliamPaypalTransaction
+    william_txn = PackageTransaction.objects.create(user=request.user, amount=total_amount, pkt_id=pkte.id)
+    # What you want the button to do.
+    paypal_dict = {
+        "business": settings.PAYPAL_WILLIAM_ADDRESS,
+        "amount": str(total_amount),
+        "item_name": "name of the item",
+        "invoice": "unique-invoice-id",
+        "notify_url": notify_url,
+        "return_url": return_url,
+        "cancel_return": cancel_url,
+        "custom": str(william_txn.id),  # Custom command to correlate to some function later (optional)
+    }
+
+    # Create the instance.
+    form = PayPalPaymentsForm(initial=paypal_dict)
+
+    # return render_to_response('administracion/pago.html', common_data(request, [{'form': form}]))
+    return render_to_response('comprar_paquete.html', common_data(request, [{'paquete': pkte, 'form': form}]))
 
 
 def mostrar_paquetes_de_bids(request):
